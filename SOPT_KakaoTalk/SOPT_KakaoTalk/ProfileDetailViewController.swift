@@ -163,6 +163,14 @@ class ProfileDetailViewController: UIViewController {
         kakaoStoryContainerView.addGestureRecognizer(kakaoStoryViewGesture)
     }
     
+    private func addButtonAction() {
+        backButton.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)
+    }
+    
+    private func goToBackVC() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     //MARK: - Objc functions
     @objc func touchupChatContainerView() {
@@ -176,6 +184,10 @@ class ProfileDetailViewController: UIViewController {
     @objc func touchupKakaoStoryContainerView() {
         print("카카오스토리 클릭됨!")
     }
+    
+    @objc func touchupBackButton() {
+        self.goToBackVC()
+    }
 
     //MARK: - LifeCycles
     override func viewDidLoad() {
@@ -184,6 +196,7 @@ class ProfileDetailViewController: UIViewController {
         self.layout()
         self.config()
         self.addViewTapGestures()
+        self.addButtonAction()
     }
 }
 
