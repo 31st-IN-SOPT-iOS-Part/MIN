@@ -18,6 +18,7 @@
 		ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336428F7F3290074E18B /* SignupViewController.swift */; };
 		ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */; };
 		ABE9336A28F7F7D00074E18B /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */; };
+		ABE9336C28F7F9BB0074E18B /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		ABE9336428F7F3290074E18B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
+		ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
 				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
 				ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */,
+				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
 				ABE9334F28F7F1370074E18B /* Main.storyboard */,
 				ABE9335228F7F1380074E18B /* Assets.xcassets */,
 				ABE9335428F7F1380074E18B /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 				ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */,
 				ABE9336A28F7F7D00074E18B /* ProfileListViewController.swift in Sources */,
 				ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */,
+				ABE9336C28F7F9BB0074E18B /* ProfileDetailViewController.swift in Sources */,
 				ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */,
 				ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */,
 			);
