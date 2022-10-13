@@ -68,17 +68,8 @@
 		ABE9334828F7F1370074E18B /* SOPT_KakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
-				ABE9336128F7F2C50074E18B /* Extensions */,
-				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
-				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
-				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
-				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
-				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
-				ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */,
-				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
-				ABE9334F28F7F1370074E18B /* Main.storyboard */,
-				ABE9335228F7F1380074E18B /* Assets.xcassets */,
-				ABE9335428F7F1380074E18B /* LaunchScreen.storyboard */,
+				ABE9337328F804590074E18B /* Resource */,
+				ABE9337428F804740074E18B /* Sources */,
 				ABE9335728F7F1380074E18B /* Info.plist */,
 			);
 			path = SOPT_KakaoTalk;
@@ -90,6 +81,39 @@
 				ABE9336228F7F2D00074E18B /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ABE9337328F804590074E18B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9335228F7F1380074E18B /* Assets.xcassets */,
+				ABE9334F28F7F1370074E18B /* Main.storyboard */,
+				ABE9335428F7F1380074E18B /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ABE9337428F804740074E18B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
+				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
+				ABE9336128F7F2C50074E18B /* Extensions */,
+				ABE9337528F8048C0074E18B /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		ABE9337528F8048C0074E18B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
+				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
+				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
+				ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */,
+				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
