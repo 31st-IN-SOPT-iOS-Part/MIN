@@ -152,8 +152,30 @@ class ProfileDetailViewController: UIViewController {
     }()
     
     //MARK: - Private functions
+    private func addViewTapGestures() {
+        let chatViewGesture = UITapGestureRecognizer(target: self, action: #selector(touchupChatContainerView))
+        chatContainerView.addGestureRecognizer(chatViewGesture)
+        
+        let editProfileViewGesture = UITapGestureRecognizer(target: self, action: #selector(touchupEditProfileContainerView))
+        editProfileContainerView.addGestureRecognizer(editProfileViewGesture)
+        
+        let kakaoStoryViewGesture = UITapGestureRecognizer(target: self, action: #selector(touchupKakaoStoryContainerView))
+        kakaoStoryContainerView.addGestureRecognizer(kakaoStoryViewGesture)
+    }
+    
 
     //MARK: - Objc functions
+    @objc func touchupChatContainerView() {
+        print("나와의 채팅 클릭됨!")
+    }
+    
+    @objc func touchupEditProfileContainerView() {
+        print("프로필 편집 클릭됨!")
+    }
+    
+    @objc func touchupKakaoStoryContainerView() {
+        print("카카오스토리 클릭됨!")
+    }
 
     //MARK: - LifeCycles
     override func viewDidLoad() {
@@ -161,6 +183,7 @@ class ProfileDetailViewController: UIViewController {
         
         self.layout()
         self.config()
+        self.addViewTapGestures()
     }
 }
 
