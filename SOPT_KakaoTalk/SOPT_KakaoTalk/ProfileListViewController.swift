@@ -62,6 +62,24 @@ class ProfileListViewController: UIViewController {
         
         self.layout()
         self.config()
+        self.addTapGestures() 
+    }
+    
+    //MARK: - Private functions
+    private func addTapGestures() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(touchupListView))
+        profileListView.addGestureRecognizer(tapGesture)
+    }
+    
+    private func presentProfileDetailVC() {
+        let detailVC = ProfileDetailViewController()
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - Objc functions
+    @objc func touchupListView() {
+        self.presentProfileDetailVC()
     }
 
 }

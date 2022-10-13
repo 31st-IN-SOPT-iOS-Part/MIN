@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
             
-            let rootVC = ProfileDetailViewController()
+            let rootVC = ProfileListViewController()
             //let navigationController = UINavigationController(rootViewController: rootVC)
             
             window.rootViewController = rootVC
