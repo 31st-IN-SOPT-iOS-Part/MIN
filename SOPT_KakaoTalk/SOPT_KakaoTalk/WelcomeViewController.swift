@@ -36,17 +36,24 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        layout()
-        config()
+        self.layout()
+        self.config()
+        self.addButtonActions()
     }
     
-    //MARK: - functions
-
-    
     //MARK: - private functions
-
+    private func addButtonActions() {
+        completeButton.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)
+    }
     
     //MARK: - objc functions
+    @objc
+    private func touchupBackButton() {
+        guard let presentingVC = presentingViewController as? UINavigationController else {return}
+        self.dismiss(animated: true) {
+            presentingVC.popViewController(animated: true)
+        }
+    }
 }
 
 //MARK: - Extensions
