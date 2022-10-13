@@ -16,6 +16,7 @@
 		ABE9336028F7F27A0074E18B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ABE9335F28F7F27A0074E18B /* SnapKit */; };
 		ABE9336328F7F2D00074E18B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336228F7F2D00074E18B /* UIView.swift */; };
 		ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336428F7F3290074E18B /* SignupViewController.swift */; };
+		ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		ABE9335728F7F1380074E18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABE9336228F7F2D00074E18B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		ABE9336428F7F3290074E18B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
 				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
 				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
+				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
 				ABE9334F28F7F1370074E18B /* Main.storyboard */,
 				ABE9335228F7F1380074E18B /* Assets.xcassets */,
 				ABE9335428F7F1380074E18B /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				ABE9336328F7F2D00074E18B /* UIView.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
 				ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */,
+				ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */,
 				ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */,
 				ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */,
 			);

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
             
             //let rootVC = LoginViewController()
-            let rootVC = SignupViewController()
+            let rootVC = WelcomeViewController()
             let navigationController = UINavigationController(rootViewController: rootVC)
             
             //window.rootViewController = navigationController
