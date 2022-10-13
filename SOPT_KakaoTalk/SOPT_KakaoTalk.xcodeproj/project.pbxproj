@@ -13,6 +13,8 @@
 		ABE9335128F7F1370074E18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE9334F28F7F1370074E18B /* Main.storyboard */; };
 		ABE9335328F7F1380074E18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE9335228F7F1380074E18B /* Assets.xcassets */; };
 		ABE9335628F7F1380074E18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE9335428F7F1380074E18B /* LaunchScreen.storyboard */; };
+		ABE9336028F7F27A0074E18B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ABE9335F28F7F27A0074E18B /* SnapKit */; };
+		ABE9336328F7F2D00074E18B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336228F7F2D00074E18B /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		ABE9335228F7F1380074E18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE9335528F7F1380074E18B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABE9335728F7F1380074E18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE9336228F7F2D00074E18B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE9336028F7F27A0074E18B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 		ABE9334828F7F1370074E18B /* SOPT_KakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
+				ABE9336128F7F2C50074E18B /* Extensions */,
 				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
 				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
 				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
@@ -65,6 +70,14 @@
 				ABE9335728F7F1380074E18B /* Info.plist */,
 			);
 			path = SOPT_KakaoTalk;
+			sourceTree = "<group>";
+		};
+		ABE9336128F7F2C50074E18B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9336228F7F2D00074E18B /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = SOPT_KakaoTalk;
+			packageProductDependencies = (
+				ABE9335F28F7F27A0074E18B /* SnapKit */,
+			);
 			productName = SOPT_KakaoTalk;
 			productReference = ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = ABE9333D28F7F1370074E18B;
+			packageReferences = (
+				ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = ABE9334728F7F1370074E18B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE9336328F7F2D00074E18B /* UIView.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
 				ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */,
 				ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */,
@@ -358,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABE9335F28F7F27A0074E18B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABE9333E28F7F1370074E18B /* Project object */;
 }
