@@ -36,8 +36,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = self.window else {return}
         window.rootViewController = viewController
         
+<<<<<<< HEAD
         UIView.transition(with: window, duration: 0.2, animations: nil)
     }
+=======
+        UIView.transition(with: window, duration: 0.5, animations: nil)
+    }
+    
+>>>>>>> #2
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
