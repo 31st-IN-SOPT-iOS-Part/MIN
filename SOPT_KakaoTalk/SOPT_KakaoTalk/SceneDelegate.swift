@@ -23,13 +23,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
             
-            let rootVC = ProfileListViewController()
-            //let navigationController = UINavigationController(rootViewController: rootVC)
+            let rootVC = LoginViewController()
+            let navigationController = UINavigationController(rootViewController: rootVC)
             
-            window.rootViewController = rootVC
+            window.rootViewController = navigationController
             window.makeKeyAndVisible()
             self.window = window
         }
+    }
+    
+    func changeRootViewController(_ viewController: UIViewController, animated: Bool) {
+        guard let window = self.window else {return}
+        window.rootViewController = viewController
+        
+        UIView.transition(with: window, duration: 0.2, animations: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

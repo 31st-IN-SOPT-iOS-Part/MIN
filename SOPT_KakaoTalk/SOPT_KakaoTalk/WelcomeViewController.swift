@@ -52,16 +52,18 @@ class WelcomeViewController: UIViewController {
     
     //MARK: - private functions
     private func addButtonActions() {
-        completeButton.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)
+        completeButton.addTarget(self, action: #selector(touchupCompleteButton), for: .touchUpInside)
+    }
+    
+    private func goToFriendListViewController() {
+        let listVC = ProfileListViewController()
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(listVC, animated: true)
     }
     
     //MARK: - objc functions
     @objc
-    private func touchupBackButton() {
-        guard let presentingVC = presentingViewController as? UINavigationController else {return}
-        self.dismiss(animated: true) {
-            presentingVC.popViewController(animated: true)
-        }
+    private func touchupCompleteButton() {
+        self.goToFriendListViewController()
     }
 }
 
