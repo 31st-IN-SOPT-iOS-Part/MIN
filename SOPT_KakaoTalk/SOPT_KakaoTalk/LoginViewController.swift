@@ -99,6 +99,7 @@ class LoginViewController: UIViewController {
         
         self.layout()
         self.config()
+        self.addButtonAction()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,10 +109,40 @@ class LoginViewController: UIViewController {
     }
  
     //MARK: - Private functions
+    private func presentToWelcomeVC() {
+        let welcomeVC = WelcomeViewController()
+        welcomeVC.modalPresentationStyle = .fullScreen
+        welcomeVC.email = self.emailTextField.text
+        //welcomeVC.dataBind()
+        
+        self.present(welcomeVC, animated: true, completion: nil)
+    }
+    
+    private func pushToSignupVC() {
+        let signupVC = SignupViewController()
+
+        self.navigationController?.pushViewController(signupVC, animated: true)
+    }
+    
+    private func addButtonAction() {
+        loginButton.addTarget(self, action: #selector(touchupLoginButton), for: .touchUpInside)
+        signupButton.addTarget(self, action: #selector(touchupSignupButton), for: .touchUpInside)
+    }
     
     private func setTextField() {
         self.emailTextField.text = ""
         self.passwordTextField.text = ""
+    }
+    
+    //MARK: - Objc functions
+    @objc
+    private func touchupLoginButton() {
+        self.presentToWelcomeVC()
+    }
+    
+    @objc
+    private func touchupSignupButton() {
+        self.pushToSignupVC()
     }
     
  
