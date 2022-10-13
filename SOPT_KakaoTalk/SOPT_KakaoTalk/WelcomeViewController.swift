@@ -41,6 +41,15 @@ class WelcomeViewController: UIViewController {
         self.addButtonActions()
     }
     
+    //MARK: - functions
+    func dataBind() {
+        guard let email = self.email else {return}
+        self.welcomeLabel.text = """
+                                 \(email)님
+                                 환영합니다
+                                 """
+    }
+    
     //MARK: - private functions
     private func addButtonActions() {
         completeButton.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)

@@ -113,7 +113,7 @@ class LoginViewController: UIViewController {
         let welcomeVC = WelcomeViewController()
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.email = self.emailTextField.text
-        //welcomeVC.dataBind()
+        welcomeVC.dataBind()
         
         self.present(welcomeVC, animated: true, completion: nil)
     }
