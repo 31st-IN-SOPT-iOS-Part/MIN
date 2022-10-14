@@ -16,7 +16,6 @@ class ProfileDetailViewController: UIViewController {
         let stackView = UIStackView()
     
         stackView.axis = .vertical
-        stackView.distribution = .fill
         stackView.alignment = .center
         stackView.spacing = 5
         
@@ -52,8 +51,6 @@ class ProfileDetailViewController: UIViewController {
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.spacing = 0
         
         return stackView
     }()
@@ -68,7 +65,6 @@ class ProfileDetailViewController: UIViewController {
         
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.distribution = .fill
         stackView.spacing = 10
     
         return stackView
@@ -97,7 +93,6 @@ class ProfileDetailViewController: UIViewController {
         
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.distribution = .fill
         stackView.spacing = 10
     
         
@@ -127,7 +122,6 @@ class ProfileDetailViewController: UIViewController {
         
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.distribution = .fill
         stackView.spacing = 10
     
         
