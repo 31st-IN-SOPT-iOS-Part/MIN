@@ -6,12 +6,7 @@ import SnapKit
 class ProfileListViewController: UIViewController {
     
     //MARK: - UI Components
-    private let titleView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        
-        return view
-    }()
+    private let titleView = UIView()
     
     private let friendLabel: UILabel = {
         let label = UILabel()
@@ -28,18 +23,9 @@ class ProfileListViewController: UIViewController {
         return button
     }()
     
-    private let profileListView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        
-        return view
-    }()
+    private let profileListView = UIView()
     
-    private let profileView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+    private let profileView = UIView()
     
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -91,8 +77,7 @@ extension ProfileListViewController {
     private func layout() {
         view.addSubviews([titleView, profileListView])
         titleView.addSubviews([friendLabel, settingButton])
-        profileListView.addSubviews([profileView, nameLabel])
-        profileView.addSubview(profileImageView)
+        profileListView.addSubviews([profileImageView, nameLabel])
         
         //화면 전환 고려하여 Navigation bar로 수정해 보기
         titleView.snp.makeConstraints { make in
@@ -117,21 +102,16 @@ extension ProfileListViewController {
             make.height.equalTo(70)
         }
         
-        profileView.snp.makeConstraints { make in
+        profileImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(14)
             make.width.equalTo(59)
             make.height.equalTo(58)
         }
-        
-        profileImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        
+
         nameLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(self.profileView.snp.trailing).offset(10)
+            make.leading.equalTo(self.profileImageView.snp.trailing).offset(10)
         }
         
     }
