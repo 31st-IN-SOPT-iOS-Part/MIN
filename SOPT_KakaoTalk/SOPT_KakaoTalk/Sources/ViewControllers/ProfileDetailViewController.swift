@@ -12,8 +12,9 @@ class ProfileDetailViewController: UIViewController {
         return button
     }()
     
-    private let profileStackView: UIStackView = {
+    private lazy var profileStackView: UIStackView = {
         let stackView = UIStackView()
+    
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .center
@@ -172,13 +173,8 @@ extension ProfileDetailViewController {
     private func layout() {
         view.addSubviews([backButton, profileStackView, menuStackView, menuLineView])
         
-        [profileImageView, nameLabel].forEach {
-            profileStackView.addArrangedSubview($0)
-        }
-        
-        [chatContainerView, editProfileContainerView, kakaoStoryContainerView].forEach {
-            menuStackView.addArrangedSubview($0)
-        }
+        profileStackView.addArrangedSubviews([profileImageView, nameLabel])
+        menuStackView.addArrangedSubviews([chatContainerView, editProfileContainerView, kakaoStoryContainerView])
         
         chatContainerView.addSubviews([chatImageView, chatLabel])
         editProfileContainerView.addSubviews([editProfileImageView, editProfileLabel])
