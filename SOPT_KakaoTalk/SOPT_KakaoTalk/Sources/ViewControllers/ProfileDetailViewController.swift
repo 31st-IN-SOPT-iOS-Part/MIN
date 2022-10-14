@@ -32,7 +32,7 @@ class ProfileDetailViewController: UIViewController {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "김민"
+        label.text = "이름"
         label.font = .systemFont(ofSize: 18)
         label.textColor = .white
         
@@ -115,7 +115,6 @@ class ProfileDetailViewController: UIViewController {
         return label
     }()
     
-    
     //kakaoStory Button
     private let kakaoStoryStackView: UIStackView = {
         let stackView = UIStackView()
@@ -143,6 +142,16 @@ class ProfileDetailViewController: UIViewController {
         
         return label
     }()
+    
+    //MARK: - Properties
+    var name: String?
+    
+    
+    //MARK: - Functions
+    func dataBind() {
+        guard let name = self.name else {return}
+        self.nameLabel.text = name
+    }
     
     
     //MARK: - Private functions

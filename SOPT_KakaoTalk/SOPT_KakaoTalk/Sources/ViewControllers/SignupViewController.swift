@@ -76,6 +76,7 @@ class SignupViewController: UIViewController {
         return button
     }()
     
+    
     //MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()

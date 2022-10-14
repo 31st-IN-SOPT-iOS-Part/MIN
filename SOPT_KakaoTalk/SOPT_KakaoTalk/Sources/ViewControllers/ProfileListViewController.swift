@@ -36,7 +36,7 @@ class ProfileListViewController: UIViewController {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "김민"
+        label.text = "이름"
         label.font = .systemFont(ofSize: 17, weight: .semibold)
         
         return label
@@ -48,7 +48,18 @@ class ProfileListViewController: UIViewController {
         
         self.layout()
         self.config()
-        self.addTapGestures() 
+        self.addTapGestures()
+        
+    }
+    
+    //MARK: - Properties
+    var name: String?
+    
+    
+    //MARK: - Functions
+    func dataBind() {
+        guard let name = self.name else {return}
+        self.nameLabel.text = name
     }
     
     //MARK: - Private functions
@@ -60,6 +71,8 @@ class ProfileListViewController: UIViewController {
     private func presentProfileDetailVC() {
         let detailVC = ProfileDetailViewController()
         detailVC.modalPresentationStyle = .fullScreen
+        detailVC.name = self.nameLabel.text
+        detailVC.dataBind()
         self.present(detailVC, animated: true, completion: nil)
     }
     
