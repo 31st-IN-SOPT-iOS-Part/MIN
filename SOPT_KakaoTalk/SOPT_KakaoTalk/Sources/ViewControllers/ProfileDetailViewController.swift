@@ -128,7 +128,7 @@ class ProfileDetailViewController: UIViewController {
         kakaoStoryContainerView.addGestureRecognizer(kakaoStoryViewGesture)
     }
     
-    private func addButtonAction() {
+    private func addButtonActions() {
         backButton.addTarget(self, action: #selector(touchupBackButton), for: .touchUpInside)
     }
     
@@ -161,7 +161,7 @@ class ProfileDetailViewController: UIViewController {
         self.layout()
         self.config()
         self.addViewTapGestures()
-        self.addButtonAction()
+        self.addButtonActions()
     }
 }
 
