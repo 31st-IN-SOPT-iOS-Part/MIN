@@ -21,12 +21,7 @@ class ProfileDetailViewController: UIViewController {
         
         return stackView
     }()
-    
-    private let profileView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+
     
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -63,18 +58,7 @@ class ProfileDetailViewController: UIViewController {
     }()
     
     //chat button
-    private let chatContainerView:  UIView = {
-        let view = UIView()
-        view.isUserInteractionEnabled = true
-        
-        return view
-    }()
-    
-    private let chatView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+    private let chatContainerView = UIView()
     
     private let chatImageView: UIImageView = {
         let imageView = UIImageView()
@@ -82,7 +66,7 @@ class ProfileDetailViewController: UIViewController {
         
         return imageView
     }()
-    
+
     private let chatLabel: UILabel = {
         let label = UILabel()
         label.text = "나와의 채팅"
@@ -93,17 +77,7 @@ class ProfileDetailViewController: UIViewController {
     }()
     
     //edit profile button
-    private let editProfileContainerView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
-    
-    private let editProfileView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+    private let editProfileContainerView = UIView()
     
     private let editProfileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -123,17 +97,7 @@ class ProfileDetailViewController: UIViewController {
     
     
     //kakaoStory Button
-    private let kakaoStoryContainerView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
-    
-    private let kakaoStoryView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
+    private let kakaoStoryContainerView = UIView()
     
     private let kakaoStoryImageView: UIImageView = {
         let imageView = UIImageView()
@@ -150,6 +114,7 @@ class ProfileDetailViewController: UIViewController {
         
         return label
     }()
+    
     
     //MARK: - Private functions
     private func addViewTapGestures() {
@@ -206,9 +171,8 @@ extension ProfileDetailViewController {
     //MARK: - Layout
     private func layout() {
         view.addSubviews([backButton, profileStackView, menuStackView, menuLineView])
-        profileView.addSubview(profileImageView)
         
-        [profileView, nameLabel].forEach {
+        [profileImageView, nameLabel].forEach {
             profileStackView.addArrangedSubview($0)
         }
         
@@ -216,14 +180,10 @@ extension ProfileDetailViewController {
             menuStackView.addArrangedSubview($0)
         }
         
-        chatContainerView.addSubviews([chatView, chatLabel])
-        chatView.addSubviews([chatImageView])
+        chatContainerView.addSubviews([chatImageView, chatLabel])
+        editProfileContainerView.addSubviews([editProfileImageView, editProfileLabel])
+        kakaoStoryContainerView.addSubviews([kakaoStoryImageView, kakaoStoryLabel])
         
-        editProfileContainerView.addSubviews([editProfileView, editProfileLabel])
-        editProfileView.addSubviews([editProfileImageView])
-        
-        kakaoStoryContainerView.addSubviews([kakaoStoryView, kakaoStoryLabel])
-        kakaoStoryView.addSubviews([kakaoStoryImageView])
         
         backButton.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide).offset(14)
@@ -238,8 +198,8 @@ extension ProfileDetailViewController {
             make.width.equalTo(288)
             make.height.equalTo(72)
         }
-        
-        chatView.snp.makeConstraints { make in
+
+        chatImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(22)
             make.centerX.equalToSuperview()
             make.height.equalTo(19)
@@ -247,15 +207,12 @@ extension ProfileDetailViewController {
         }
         
         chatLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.chatView.snp.bottom).offset(10)
+            make.top.equalTo(self.chatImageView.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
         }
         
-        chatImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        editProfileView.snp.makeConstraints { make in
+
+        editProfileImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(22)
             make.centerX.equalToSuperview()
             make.height.equalTo(19)
@@ -263,15 +220,11 @@ extension ProfileDetailViewController {
         }
         
         editProfileLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.chatView.snp.bottom).offset(10)
+            make.top.equalTo(self.editProfileImageView.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
         }
         
-        editProfileImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        kakaoStoryView.snp.makeConstraints { make in
+        kakaoStoryImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(22)
             make.centerX.equalToSuperview()
             make.height.equalTo(19)
@@ -279,12 +232,8 @@ extension ProfileDetailViewController {
         }
         
         kakaoStoryLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.chatView.snp.bottom).offset(10)
+            make.top.equalTo(self.kakaoStoryImageView.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
-        }
-        
-        kakaoStoryImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
         }
         
         
@@ -300,14 +249,9 @@ extension ProfileDetailViewController {
             make.width.equalTo(100)
             make.height.equalTo(130)
         }
-
-        
-        profileView.snp.makeConstraints { make in
-            make.width.equalTo(profileView.snp.height).multipliedBy(1.0 / 1.0)
-        }
         
         profileImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.width.equalTo(profileImageView.snp.height).multipliedBy(1.0 / 1.0)
         }
         
         
