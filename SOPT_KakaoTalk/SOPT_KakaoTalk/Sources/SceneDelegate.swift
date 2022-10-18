@@ -31,6 +31,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
         }
     }
+    
+    func changeRootViewController(_ viewController: UIViewController, animated: Bool) {
+        guard let window = self.window else {return}
+        window.rootViewController = viewController
+        
+        UIView.transition(with: window, duration: 0.2, animations: nil)
+    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
