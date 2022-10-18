@@ -24,13 +24,11 @@ class MusicTableViewCell: UITableViewCell {
     private let titleLabel = UILabel().then {
         $0.textColor = .black
         $0.font = .systemFont(ofSize: 17, weight: .medium)
-        $0.text = "test"
     }
     
     private let singerLabel = UILabel().then {
         $0.textColor = 0x1E1E1E.color
         $0.font = .systemFont(ofSize: 15, weight: .medium)
-        $0.text = "test"
     }
     
     private lazy var clickableButton: UIButton = {
@@ -77,13 +75,13 @@ extension MusicTableViewCell {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalTo(albumContainerView.snp.trailing).offset(16)
-            make.top.equalToSuperview().offset(15)
+            make.leading.equalTo(albumContainerView.snp.trailing).offset(15)
+            make.top.equalToSuperview().offset(16)
         }
         
         singerLabel.snp.makeConstraints { make in
-            make.leading.equalTo(titleLabel.snp.leading)
-            make.top.equalTo(singerLabel.snp.bottom).offset(4)
+            make.leading.equalTo(titleLabel)
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
         }
         
         clickableButton.snp.makeConstraints { make in
@@ -91,5 +89,13 @@ extension MusicTableViewCell {
             make.centerY.equalToSuperview()
             make.width.height.equalTo(24)
         }
+    }
+    
+    //MARK: - General Helpers
+    
+    func dataBind(model: MusicModel) {
+        albumImageView.image = UIImage(named: model.albumImage)
+        titleLabel.text = model.title
+        singerLabel.text = model.singer
     }
 }

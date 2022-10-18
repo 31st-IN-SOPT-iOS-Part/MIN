@@ -26,6 +26,20 @@ class MusicListViewController: UIViewController {
         return tableView
     }()
     
+    //MARK: - Variables
+    
+    var musicList: [MusicModel] = [
+            MusicModel(albumImage: "albumImage1", title: "Eleven", singer: "IVE(아이브)"),
+            MusicModel(albumImage: "albumImage2", title: "After LIKE", singer: "IVE(아이브)"),
+            MusicModel(albumImage: "albumImage3", title: "Attention", singer: "New Jeans"),
+            MusicModel(albumImage: "albumImage4", title: "Shut Down", singer: "BLACKPINK"),
+            MusicModel(albumImage: "albumImage5", title: "Hype Boy", singer: "New Jeans"),
+            MusicModel(albumImage: "albumImage6", title: "LOVE DIVE", singer: "IVE(아이브)"),
+            MusicModel(albumImage: "albumImage7", title: "Pink Venom", singer: "BLACKPINK"),
+            MusicModel(albumImage: "albumImage8", title: "Rush Hour (feat. j-hope of ...", singer: "Crush"),
+            MusicModel(albumImage: "albumImage9", title: "Monologue", singer: "테이")
+        ]
+    
     
     //MARK: - LifeCycles
 
@@ -51,7 +65,7 @@ extension MusicListViewController {
         musicTableView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalToSuperview()
-            make.height.equalTo(70*10) //ex. 10개
+            make.height.equalTo(70*musicList.count)
         }
     }
     
@@ -67,12 +81,13 @@ extension MusicListViewController {
 
 extension MusicListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 //ex.10개
+        return musicList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let musicCell = tableView.dequeueReusableCell(withIdentifier: MusicTableViewCell.identifier, for: indexPath) as? MusicTableViewCell else {return UITableViewCell()}
         
+        musicCell.dataBind(model: musicList[indexPath.row])
         return musicCell
     }
     
