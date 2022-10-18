@@ -18,6 +18,8 @@
 		ABD0F95D28FEEC7C0045D52B /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = ABD0F95C28FEEC7C0045D52B /* SwiftyColor */; };
 		ABD0F95F28FEED220045D52B /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD0F95E28FEED220045D52B /* MusicModel.swift */; };
 		ABD0F96128FEEEF30045D52B /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD0F96028FEEEF30045D52B /* MusicTableViewCell.swift */; };
+		ABD0F96328FEFA070045D52B /* MusicGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD0F96228FEFA070045D52B /* MusicGridViewController.swift */; };
+		ABD0F96528FEFF750045D52B /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD0F96428FEFF750045D52B /* MusicCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		ABD0F94C28FEEB0F0045D52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABD0F95E28FEED220045D52B /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		ABD0F96028FEEEF30045D52B /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		ABD0F96228FEFA070045D52B /* MusicGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGridViewController.swift; sourceTree = "<group>"; };
+		ABD0F96428FEFF750045D52B /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				ABD0F94228FEEB0D0045D52B /* MusicListViewController.swift */,
+				ABD0F96228FEFA070045D52B /* MusicGridViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				ABD0F96028FEEEF30045D52B /* MusicTableViewCell.swift */,
+				ABD0F96428FEFF750045D52B /* MusicCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -188,6 +194,8 @@
 				ABD0F94328FEEB0D0045D52B /* MusicListViewController.swift in Sources */,
 				ABD0F95F28FEED220045D52B /* MusicModel.swift in Sources */,
 				ABD0F93F28FEEB0D0045D52B /* AppDelegate.swift in Sources */,
+				ABD0F96528FEFF750045D52B /* MusicCollectionViewCell.swift in Sources */,
+				ABD0F96328FEFA070045D52B /* MusicGridViewController.swift in Sources */,
 				ABD0F94128FEEB0D0045D52B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
