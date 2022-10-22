@@ -1,48 +1,36 @@
-
 import UIKit
 import SnapKit
+import Then
  
 //MARK: - ProfileListViewController
+
 class ProfileListViewController: UIViewController {
     
     //MARK: - UI Components
+    
     private let titleView = UIView()
+    private let friendLabel = UILabel().then {
+        $0.text = "친구"
+        $0.font = .systemFont(ofSize: 22, weight: .semibold)
+    }
     
-    private let friendLabel: UILabel = {
-        let label = UILabel()
-        label.text = "친구"
-        label.font = .systemFont(ofSize: 22, weight: .semibold)
-        
-        return label
-    }()
-    
-    private let settingButton: UIButton = {
-        let button = UIButton()
-        button.setBackgroundImage(UIImage(named: "settings 1"), for: .normal)
-        
-        return button
-    }()
+    private let settingButton = UIButton().then {
+        $0.setBackgroundImage(UIImage(named: "settings 1"), for: .normal)
+    }
     
     private let profileListView = UIView()
-    
     private let profileView = UIView()
+    private let profileImageView = UIImageView().then {
+        $0.image = UIImage(named: "friendtab_profileImg")
+    }
     
-    private let profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "friendtab_profileImg")
-        
-        return imageView
-    }()
-    
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "이름"
-        label.font = .systemFont(ofSize: 17, weight: .semibold)
-        
-        return label
-    }()
+    private let nameLabel = UILabel().then {
+        $0.text = "이름"
+        $0.font = .systemFont(ofSize: 17, weight: .semibold)
+    }
 
     //MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,16 +41,19 @@ class ProfileListViewController: UIViewController {
     }
     
     //MARK: - Properties
+    
     var name: String?
     
     
     //MARK: - Functions
+    
     func dataBind() {
         guard let name = self.name else {return}
         self.nameLabel.text = name
     }
     
     //MARK: - Private functions
+    
     private func addTapGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(touchupListView))
         profileListView.addGestureRecognizer(tapGesture)
@@ -77,6 +68,7 @@ class ProfileListViewController: UIViewController {
     }
     
     //MARK: - Objc functions
+    
     @objc func touchupListView() {
         self.presentProfileDetailVC()
     }
@@ -84,9 +76,11 @@ class ProfileListViewController: UIViewController {
 }
 
 //MARK: - Extensions
+
 extension ProfileListViewController {
     
     //MARK: - Layout
+    
     private func layout() {
         view.addSubviews([titleView, profileListView])
         titleView.addSubviews([friendLabel, settingButton])
@@ -130,6 +124,7 @@ extension ProfileListViewController {
     }
     
     //MARK: - Config
+    
     private func config() {
         view.backgroundColor = .white
 

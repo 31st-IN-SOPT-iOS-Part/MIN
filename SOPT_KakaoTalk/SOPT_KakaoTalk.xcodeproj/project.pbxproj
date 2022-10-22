@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABC71BB52903E4B2002EF41D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ABC71BB42903E4B2002EF41D /* Then */; };
 		ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334928F7F1370074E18B /* AppDelegate.swift */; };
 		ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334B28F7F1370074E18B /* SceneDelegate.swift */; };
 		ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334D28F7F1370074E18B /* LoginViewController.swift */; };
@@ -45,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE9336028F7F27A0074E18B /* SnapKit in Frameworks */,
+				ABC71BB52903E4B2002EF41D /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,7 @@
 			name = SOPT_KakaoTalk;
 			packageProductDependencies = (
 				ABE9335F28F7F27A0074E18B /* SnapKit */,
+				ABC71BB42903E4B2002EF41D /* Then */,
 			);
 			productName = SOPT_KakaoTalk;
 			productReference = ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */;
@@ -168,6 +171,7 @@
 			mainGroup = ABE9333D28F7F1370074E18B;
 			packageReferences = (
 				ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = ABE9334728F7F1370074E18B /* Products */;
 			projectDirPath = "";
@@ -424,6 +428,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -435,6 +447,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ABC71BB42903E4B2002EF41D /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		ABE9335F28F7F27A0074E18B /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */;

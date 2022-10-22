@@ -1,38 +1,37 @@
 import UIKit
 import SnapKit
+import Then
 
 //MARK: - WelcomeViewController
+
 class WelcomeViewController: UIViewController {
     
     //MARK: - UI Components
-    private let welcomeLabel: UILabel = {
-        let label = UILabel()
-        label.text = """
+    
+    private let welcomeLabel = UILabel().then {
+        $0.text = """
                     님
                     환영합니다
                     """
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 20, weight: .semibold)
-        
-        return label
-    }()
+        $0.numberOfLines = 0
+        $0.textAlignment = .center
+        $0.font = .systemFont(ofSize: 20, weight: .semibold)
+    }
     
-    private let completeButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("확인", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15, weight: .medium)
-        button.backgroundColor = .systemYellow
-        button.layer.cornerRadius = 3
-        
-        return button
-    }()
+    private let completeButton = UIButton().then {
+        $0.setTitle("확인", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .medium)
+        $0.backgroundColor = .systemYellow
+        $0.layer.cornerRadius = 3
+    }
     
     //MARK: - Properties
+    
     var email: String?
 
     //MARK: - LifeCycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +41,7 @@ class WelcomeViewController: UIViewController {
     }
     
     //MARK: - functions
+    
     func dataBind() {
         guard let email = self.email else {return}
         self.welcomeLabel.text = """
@@ -51,6 +51,7 @@ class WelcomeViewController: UIViewController {
     }
     
     //MARK: - private functions
+    
     private func addButtonActions() {
         completeButton.addTarget(self, action: #selector(touchupCompleteButton), for: .touchUpInside)
     }
@@ -63,6 +64,7 @@ class WelcomeViewController: UIViewController {
     }
     
     //MARK: - objc functions
+    
     @objc
     private func touchupCompleteButton() {
         self.goToFriendListViewController()
@@ -70,8 +72,11 @@ class WelcomeViewController: UIViewController {
 }
 
 //MARK: - Extensions
+
 extension WelcomeViewController {
+    
     //MARK: - Layout
+    
     private func layout() {
         view.addSubviews([welcomeLabel, completeButton])
         
@@ -89,6 +94,7 @@ extension WelcomeViewController {
     }
     
     //MARK: - Config
+    
     private func config() {
         view.backgroundColor = .white
     }

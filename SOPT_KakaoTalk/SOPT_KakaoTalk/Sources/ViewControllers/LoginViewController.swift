@@ -1,99 +1,76 @@
 import UIKit
 import SnapKit
+import Then
 
 //MARK: - LoginViewController
+
 class LoginViewController: UIViewController {
     
     //MARK: - UI components
+    
     //카카오톡을 시작합니다 label
-    private let startLabel: UILabel = {
-        let label = UILabel()
-        label.text = "카카오톡을 시작합니다"
-        label.font = .systemFont(ofSize: 22, weight: .medium)
-        
-        return label
-    }()
+    private let startLabel = UILabel().then {
+        $0.text = "카카오톡을 시작합니다"
+        $0.font = .systemFont(ofSize: 22, weight: .medium)
+    }
     
     //detail label
-    private let detailLabel: UILabel = {
-        let label = UILabel()
-        label.text = "사용하던 카카오계정이 있다면\n이메일 또는 전화번호로 로그인해 주세요."
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 15)
-        label.textColor = .darkGray
-        
-        return label
-    }()
+    private let detailLabel = UILabel().then {
+        $0.text = "사용하던 카카오계정이 있다면\n이메일 또는 전화번호로 로그인해 주세요."
+        $0.numberOfLines = 0
+        $0.textAlignment = .center
+        $0.font = .systemFont(ofSize: 15)
+        $0.textColor = .darkGray
+    }
     
     //email textField
-    private let emailTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "이메일 또는 전화번호"
-        
-        return textField
-    }()
+    private let emailTextField = UITextField().then {
+        $0.placeholder = "이메일 또는 전화번호"
+    }
     
     //password textField
-    private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "비밀번호"
-        textField.isSecureTextEntry = true
-        
-        return textField
-    }()
+    private let passwordTextField = UITextField().then {
+        $0.placeholder = "비밀번호"
+        $0.isSecureTextEntry = true
+    }
     
     //email Line view
-    private let emailLineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        
-        return view
-    }()
+    private let emailLineView = UIView().then {
+        $0.backgroundColor = .lightGray
+    }
     
     //password Line view
-    private let passwordLineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        
-        return view
-    }()
-
+    private let passwordLineView = UIView().then {
+        $0.backgroundColor = .lightGray
+    }
+    
     //login button
-    private let loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("카카오계정 로그인", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15)
-        button.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
-        button.layer.cornerRadius = 3
-        
-        return button
-    }()
+    private let loginButton = UIButton().then {
+        $0.setTitle("카카오계정 로그인", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 15)
+        $0.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
+        $0.layer.cornerRadius = 3
+    }
     
     //signup button
-    private let signupButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("새로운 카카오계정 만들기", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15)
-        button.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
-        button.layer.cornerRadius = 3
-        
-        return button
-    }()
+    private let signupButton = UIButton().then {
+        $0.setTitle("새로운 카카오계정 만들기", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 15)
+        $0.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1.0)
+        $0.layer.cornerRadius = 3
+    }
     
     //find button
-    private let findButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("카카오계정 또는 비밀번호 찾기", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 13, weight: .medium)
-        
-        return button
-    }()
+    private let findButton = UIButton().then {
+        $0.setTitle("카카오계정 또는 비밀번호 찾기", for: .normal)
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 13, weight: .medium)
+    }
 
     //MARK: - LifeCycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -109,6 +86,7 @@ class LoginViewController: UIViewController {
     }
  
     //MARK: - Private functions
+    
     private func presentToWelcomeVC() {
         let welcomeVC = WelcomeViewController()
         welcomeVC.modalPresentationStyle = .fullScreen
@@ -135,6 +113,7 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Objc functions
+    
     @objc
     private func touchupLoginButton() {
         self.presentToWelcomeVC()
@@ -150,9 +129,11 @@ class LoginViewController: UIViewController {
 }
 
 //MARK: - Extensions
+
 extension LoginViewController {
     
     //MARK: - Layout
+    
     private func layout() {
         view.addSubviews([startLabel, detailLabel, emailTextField, emailLineView, passwordTextField, passwordLineView, loginButton, signupButton, findButton])
         
@@ -216,6 +197,7 @@ extension LoginViewController {
     }
     
     //MARK: - Config
+     
     private func config() {
         view.backgroundColor = .white
     }
