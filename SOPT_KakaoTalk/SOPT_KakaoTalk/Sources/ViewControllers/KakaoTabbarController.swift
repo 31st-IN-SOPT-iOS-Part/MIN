@@ -62,8 +62,28 @@ extension KakaoTabbarController: UITabBarControllerDelegate {
         let friendNavigationController = UINavigationController(rootViewController: friendViewController)
         friendNavigationController.navigationBar.isHidden = true
         
+        let chatViewController = ChatViewController()
+        let chatNavigationController = UINavigationController(rootViewController: chatViewController)
+        chatNavigationController.navigationBar.isHidden = true
+        
+        let sharpViewController = SharpViewController()
+        let sharpNavigationController = UINavigationController(rootViewController: sharpViewController)
+        sharpNavigationController.navigationBar.isHidden = true
+        
+        let shopViewController = ShopViewController()
+        let shopNavigationController = UINavigationController(rootViewController: shopViewController)
+        shopNavigationController.navigationBar.isHidden = true
+        
+        let moreViewController = MoreViewController()
+        let moreNavigationController = UINavigationController(rootViewController: moreViewController)
+        moreNavigationController.navigationBar.isHidden = true
+        
         let viewControllers = [
-            friendViewController
+            friendViewController,
+            chatViewController,
+            sharpViewController,
+            shopViewController,
+            moreViewController
         ]
         
         self.setViewControllers(viewControllers, animated: true)
@@ -74,10 +94,18 @@ extension KakaoTabbarController: UITabBarControllerDelegate {
         tabBar.barTintColor = UIColor.white
         
         let imageNames = [
+            "heart",
+            "heart",
+            "heart",
+            "heart",
             "heart"
         ]
         
         let imageSelectedNames = [
+            "heart.fill",
+            "heart.fill",
+            "heart.fill",
+            "heart.fill",
             "heart.fill"
         ]
         
