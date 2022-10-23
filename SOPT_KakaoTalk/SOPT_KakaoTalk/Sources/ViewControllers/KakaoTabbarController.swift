@@ -59,11 +59,11 @@ extension KakaoTabbarController: UITabBarControllerDelegate {
         super.viewWillAppear(animated)
         
         let friendViewController = FriendViewController()
-        let friendNavigationController = UINavigationController(rootViewController: profileViewController)
+        let friendNavigationController = UINavigationController(rootViewController: friendViewController)
         friendNavigationController.navigationBar.isHidden = true
         
         let viewControllers = [
-            profileViewController
+            friendViewController
         ]
         
         self.setViewControllers(viewControllers, animated: true)
