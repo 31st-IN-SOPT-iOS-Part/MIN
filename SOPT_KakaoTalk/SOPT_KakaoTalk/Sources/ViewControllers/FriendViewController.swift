@@ -4,7 +4,7 @@ import Then
  
 //MARK: - ProfileListViewController
 
-class ProfileListViewController: UIViewController {
+class FriendViewController: UIViewController {
     
     //MARK: - UI Components
     
@@ -77,7 +77,7 @@ class ProfileListViewController: UIViewController {
 
 //MARK: - Extensions
 
-extension ProfileListViewController {
+extension FriendViewController {
     
     //MARK: - Layout
     

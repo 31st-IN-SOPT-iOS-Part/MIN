@@ -58,9 +58,9 @@ extension KakaoTabbarController: UITabBarControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let profileViewController = ProfileListViewController()
-        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
-        profileNavigationController.navigationBar.isHidden = true
+        let friendViewController = FriendViewController()
+        let friendNavigationController = UINavigationController(rootViewController: profileViewController)
+        friendNavigationController.navigationBar.isHidden = true
         
         let viewControllers = [
             profileViewController
