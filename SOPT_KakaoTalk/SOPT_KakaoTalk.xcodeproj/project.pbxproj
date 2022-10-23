@@ -62,6 +62,53 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		AB2D6D8529058112003D43F8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
+				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
+				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AB2D6D8629058142003D43F8 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9336928F7F7D00074E18B /* FriendViewController.swift */,
+				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		AB2D6D872905814E003D43F8 /* Sharp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sharp;
+			sourceTree = "<group>";
+		};
+		AB2D6D88290581AC003D43F8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AB2D6D89290581BC003D43F8 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		AB2D6D8A290581C4003D43F8 /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		ABE9333D28F7F1370074E18B = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +169,13 @@
 		ABE9337528F8048C0074E18B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
-				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
-				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
 				AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */,
-				ABE9336928F7F7D00074E18B /* FriendViewController.swift */,
-				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
+				AB2D6D8529058112003D43F8 /* Auth */,
+				AB2D6D8629058142003D43F8 /* Friend */,
+				AB2D6D88290581AC003D43F8 /* Chat */,
+				AB2D6D872905814E003D43F8 /* Sharp */,
+				AB2D6D89290581BC003D43F8 /* Shop */,
+				AB2D6D8A290581C4003D43F8 /* More */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
