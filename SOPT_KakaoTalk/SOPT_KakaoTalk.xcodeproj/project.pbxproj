@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */; };
 		ABC71BB52903E4B2002EF41D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ABC71BB42903E4B2002EF41D /* Then */; };
 		ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334928F7F1370074E18B /* AppDelegate.swift */; };
 		ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334B28F7F1370074E18B /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabbarController.swift; sourceTree = "<group>"; };
 		ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_KakaoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE9334928F7F1370074E18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE9334B28F7F1370074E18B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
 				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
 				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
+				AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */,
 				ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */,
 				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
 			);
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE9336328F7F2D00074E18B /* UIView.swift in Sources */,
+				AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */,
 				ABE9339A28F98FE10074E18B /* UIStackView.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
 				ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */,
