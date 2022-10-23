@@ -94,25 +94,25 @@ extension KakaoTabbarController: UITabBarControllerDelegate {
         tabBar.barTintColor = UIColor.white
         
         let imageNames = [
-            "heart",
-            "heart",
-            "heart",
-            "heart",
-            "heart"
+            "iconTabPersonUnfilled",
+            "iconTabChatUnfilled",
+            "iconTabSharpUnfilled",
+            "iconTabShopUnfilled",
+            "iconTabMoreUnfilled"
         ]
         
         let imageSelectedNames = [
-            "heart.fill",
-            "heart.fill",
-            "heart.fill",
-            "heart.fill",
-            "heart.fill"
+            "iconTabPersonFilled",
+            "iconTabChatFilled",
+            "iconTabSharpFilled",
+            "iconTabShopFilled",
+            "iconTabMoreFilled"
         ]
         
         for (index, value) in (tabBar.items?.enumerated())! {
             let tabBarItem: UITabBarItem = value as UITabBarItem
             
-            tabBarItem.image = UIImage(systemName: imageNames[index])?.withRenderingMode(.alwaysOriginal)
+            tabBarItem.image = UIImage(named: imageNames[index])?.withRenderingMode(.alwaysOriginal)
             tabBarItem.selectedImage = UIImage(named: imageSelectedNames[index])?.withRenderingMode(.alwaysOriginal)
             tabBarItem.accessibilityIdentifier = imageNames[index]
         }
