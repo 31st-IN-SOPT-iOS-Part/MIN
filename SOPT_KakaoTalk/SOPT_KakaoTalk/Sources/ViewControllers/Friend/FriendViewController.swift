@@ -30,6 +30,20 @@ class FriendViewController: UIViewController {
         return tableView
     }()
     
+    //MARK: - Variables
+    
+    var friendList: [FriendModel] = [
+        FriendModel(friendProfileImage: "profileImage1", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage2", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage3", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage4", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage5", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage6", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage7", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage8", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage9", friendMessage: "살려줘요"),
+    ]
+    
 
     // MARK: - LifeCycle
     
@@ -85,7 +99,7 @@ extension FriendViewController {
             make.top.equalTo(titleView.snp.bottom)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalToSuperview()
-            make.height.equalTo(50*10)
+            make.height.equalTo(50*friendList.count)
         }
         
     }
@@ -104,7 +118,7 @@ extension FriendViewController {
 
 extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return friendList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

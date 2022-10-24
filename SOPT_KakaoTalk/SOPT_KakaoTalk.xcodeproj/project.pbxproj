@@ -14,6 +14,7 @@
 		AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D912905824B003D43F8 /* MoreViewController.swift */; };
 		AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */; };
 		AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = AB8EA14B290673C500AFAA61 /* SwiftyColor */; };
+		AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14E2906755C00AFAA61 /* FriendModel.swift */; };
 		ABC71BB52903E4B2002EF41D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ABC71BB42903E4B2002EF41D /* Then */; };
 		ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334928F7F1370074E18B /* AppDelegate.swift */; };
 		ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334B28F7F1370074E18B /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 		AB2D6D8F29058242003D43F8 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		AB2D6D912905824B003D43F8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		AB8EA14E2906755C00AFAA61 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_KakaoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE9334928F7F1370074E18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE9334B28F7F1370074E18B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		AB8EA14D2906754C00AFAA61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EA14E2906755C00AFAA61 /* FriendModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ABE9333D28F7F1370074E18B = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		ABE9337428F804740074E18B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				AB8EA14D2906754C00AFAA61 /* Model */,
 				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
 				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
 				ABE9336128F7F2C50074E18B /* Extensions */,
@@ -293,6 +304,7 @@
 				AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */,
 				ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */,
 				ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */,
+				AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
