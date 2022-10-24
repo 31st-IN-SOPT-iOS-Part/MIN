@@ -59,7 +59,6 @@ class WelcomeViewController: UIViewController {
     private func goToFriendListViewController() {
         let listVC = FriendViewController()
         listVC.name = self.email
-        listVC.dataBind()
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(listVC, animated: true)
     }
     

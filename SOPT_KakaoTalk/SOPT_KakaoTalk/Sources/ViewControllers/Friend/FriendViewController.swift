@@ -2,11 +2,11 @@ import UIKit
 import SnapKit
 import Then
  
-//MARK: - ProfileListViewController
+// MARK: - ProfileListViewController
 
 class FriendViewController: UIViewController {
     
-    //MARK: - UI Components
+    // MARK: - UI Components
     
     private let titleView = UIView()
     private let friendLabel = UILabel().then {
@@ -18,75 +18,53 @@ class FriendViewController: UIViewController {
         $0.setBackgroundImage(UIImage(named: "settings 1"), for: .normal)
     }
     
-    private let profileListView = UIView()
-    private let profileView = UIView()
-    private let profileImageView = UIImageView().then {
-        $0.image = UIImage(named: "friendtab_profileImg")
-    }
+    private lazy var friendTableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.backgroundColor = .clear
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        return tableView
+    }()
     
-    private let nameLabel = UILabel().then {
-        $0.text = "이름"
-        $0.font = .systemFont(ofSize: 17, weight: .semibold)
-    }
 
-    //MARK: - LifeCycle
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.layout()
-        self.config()
-        self.addTapGestures()
+        layout()
+        config()
+        register()
         
     }
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     var name: String?
     
     
-    //MARK: - Functions
+    // MARK: - Functions
     
-    func dataBind() {
-        guard let name = self.name else {return}
-        self.nameLabel.text = name
-    }
+    // MARK: - Private functions
     
-    //MARK: - Private functions
-    
-    private func addTapGestures() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(touchupListView))
-        profileListView.addGestureRecognizer(tapGesture)
-    }
-    
-    private func presentProfileDetailVC() {
-        let detailVC = ProfileDetailViewController()
-        detailVC.modalPresentationStyle = .fullScreen
-        detailVC.name = self.nameLabel.text
-        detailVC.dataBind()
-        self.present(detailVC, animated: true, completion: nil)
-    }
-    
-    //MARK: - Objc functions
-    
-    @objc func touchupListView() {
-        self.presentProfileDetailVC()
-    }
+    // MARK: - Objc functions
 
 }
 
-//MARK: - Extensions
+// MARK: - Extensions
 
 extension FriendViewController {
     
-    //MARK: - Layout
+    // MARK: - Layout
     
     private func layout() {
-        view.addSubviews([titleView, profileListView])
+        view.addSubviews([titleView, friendTableView])
         titleView.addSubviews([friendLabel, settingButton])
-        profileListView.addSubviews([profileImageView, nameLabel])
         
-        //화면 전환 고려하여 Navigation bar로 수정해 보기
         titleView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
@@ -103,31 +81,40 @@ extension FriendViewController {
             make.centerY.equalTo(self.friendLabel)
         }
         
-        profileListView.snp.makeConstraints { make in
-            make.top.equalTo(self.titleView.snp.bottom)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(70)
-        }
-        
-        profileImageView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(14)
-            make.width.equalTo(59)
-            make.height.equalTo(58)
-        }
-
-        nameLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalTo(self.profileImageView.snp.trailing).offset(10)
+        friendTableView.snp.makeConstraints { make in
+            make.top.equalTo(titleView.snp.bottom)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalToSuperview()
+            make.height.equalTo(50*10)
         }
         
     }
     
-    //MARK: - Config
+    // MARK: - Genral
     
     private func config() {
         view.backgroundColor = .white
 
     }
+    
+    private func register() {
+        friendTableView.register(FriendTableViewCell.self, forCellReuseIdentifier: FriendTableViewCell.identifier)
+    }
 }
 
+extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.identifier, for: indexPath) as? FriendTableViewCell else {return UITableViewCell()}
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+}
