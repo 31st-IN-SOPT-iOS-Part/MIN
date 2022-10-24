@@ -21,7 +21,6 @@ class FriendTableViewCell: UITableViewCell {
     // MARK: - UI Components
     
     private let friendProfileImage = UIImageView()
-    
     private let friendNameLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12, weight: .semibold)
     }

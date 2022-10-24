@@ -74,7 +74,7 @@ extension FriendViewController {
         titleView.addSubviews([friendLabel, settingButton])
         
         titleView.snp.makeConstraints { make in
-            make.top.equalTo(self.view.safeAreaLayoutGuide)
+            make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(52)
         }
@@ -85,8 +85,8 @@ extension FriendViewController {
         }
         
         settingButton.snp.makeConstraints { make in
-            make.leading.equalTo(self.friendLabel.snp.trailing).offset(2)
-            make.centerY.equalTo(self.friendLabel)
+            make.trailing.equalToSuperview().offset(-15)
+            make.centerY.equalTo(friendLabel)
         }
         
         friendTableView.snp.makeConstraints { make in
@@ -119,7 +119,6 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.identifier, for: indexPath) as? FriendTableViewCell else {return UITableViewCell()}
         
         cell.dataBind(dataModel: friendList[indexPath.row])
-        
         return cell
     }
     
