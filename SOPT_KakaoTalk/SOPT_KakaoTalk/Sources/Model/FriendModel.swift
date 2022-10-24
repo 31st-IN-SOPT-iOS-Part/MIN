@@ -9,5 +9,6 @@ import Foundation
 
 struct FriendModel {
     let friendProfileImage: String
+    let friendName: String
     let friendMessage: String
 }

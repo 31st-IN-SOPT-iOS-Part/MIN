@@ -20,17 +20,13 @@ class FriendTableViewCell: UITableViewCell {
     
     // MARK: - UI Components
     
-    private let friendProfileImage = UIImageView().then {
-        $0.backgroundColor = .yellow
-    }
+    private let friendProfileImage = UIImageView()
     
     private let friendNameLabel = UILabel().then {
-        $0.text = "test"
         $0.font = .systemFont(ofSize: 12, weight: .semibold)
     }
     
     private let friendMessageLabel = UILabel().then {
-        $0.text = "test test"
         $0.font = .systemFont(ofSize: 11)
         $0.textColor = 0xA6A6A6.color
     }
@@ -48,6 +44,7 @@ class FriendTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 // MARK: - Extensions
@@ -82,5 +79,12 @@ extension FriendTableViewCell {
     private func config() {
         backgroundColor = .clear
         contentView.backgroundColor = .white
+        selectionStyle = .none
+    }
+    
+    func dataBind(dataModel: FriendModel) {
+        friendProfileImage.image = UIImage(named: dataModel.friendProfileImage)
+        friendNameLabel.text = dataModel.friendName
+        friendMessageLabel.text = dataModel.friendMessage
     }
 }

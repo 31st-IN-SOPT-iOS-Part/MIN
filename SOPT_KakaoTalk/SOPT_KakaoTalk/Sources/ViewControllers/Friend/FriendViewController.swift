@@ -33,15 +33,15 @@ class FriendViewController: UIViewController {
     //MARK: - Variables
     
     var friendList: [FriendModel] = [
-        FriendModel(friendProfileImage: "profileImage1", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage2", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage3", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage4", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage5", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage6", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage7", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage8", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage9", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage1", friendName: "안솝트", friendMessage: "언제 볼 건데?"),
+        FriendModel(friendProfileImage: "profileImage2", friendName: "최솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage3", friendName: "정솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage4", friendName: "강솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage5", friendName: "오솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage6", friendName: "황솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage7", friendName: "최솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage8", friendName: "고솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage9", friendName: "하솝트", friendMessage: "살려줘요"),
     ]
     
 
@@ -60,12 +60,6 @@ class FriendViewController: UIViewController {
     
     var name: String?
     
-    
-    // MARK: - Functions
-    
-    // MARK: - Private functions
-    
-    // MARK: - Objc functions
 
 }
 
@@ -123,6 +117,8 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.identifier, for: indexPath) as? FriendTableViewCell else {return UITableViewCell()}
+        
+        cell.dataBind(dataModel: friendList[indexPath.row])
         
         return cell
     }
