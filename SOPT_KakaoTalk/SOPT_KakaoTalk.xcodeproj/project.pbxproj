@@ -15,6 +15,7 @@
 		AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */; };
 		AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = AB8EA14B290673C500AFAA61 /* SwiftyColor */; };
 		AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14E2906755C00AFAA61 /* FriendModel.swift */; };
+		ABC434BB29083DFA001FE626 /* MyProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */; };
 		ABC71BB52903E4B2002EF41D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ABC71BB42903E4B2002EF41D /* Then */; };
 		ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334928F7F1370074E18B /* AppDelegate.swift */; };
 		ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334B28F7F1370074E18B /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 		AB2D6D912905824B003D43F8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		AB8EA14E2906755C00AFAA61 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileHeaderView.swift; sourceTree = "<group>"; };
 		ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_KakaoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE9334928F7F1370074E18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE9334B28F7F1370074E18B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */,
+				ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC434BB29083DFA001FE626 /* MyProfileHeaderView.swift in Sources */,
 				ABE9336328F7F2D00074E18B /* UIView.swift in Sources */,
 				AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */,
 				AB2D6D8C29058227003D43F8 /* ChatViewController.swift in Sources */,
