@@ -14,7 +14,7 @@ class FriendViewController: UIViewController {
         $0.font = .systemFont(ofSize: 22, weight: .semibold)
     }
     
-    private let settingButton = UIButton().then {
+    private let setButton = UIButton().then {
         $0.setBackgroundImage(UIImage(named: "settings 1"), for: .normal)
     }
     
@@ -74,7 +74,7 @@ extension FriendViewController {
     
     private func layout() {
         view.addSubviews([titleView, friendTableView])
-        titleView.addSubviews([friendLabel, settingButton])
+        titleView.addSubviews([friendLabel, setButton])
         
         titleView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
@@ -87,9 +87,11 @@ extension FriendViewController {
             make.centerY.equalToSuperview()
         }
         
-        settingButton.snp.makeConstraints { make in
+        setButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-15)
-            make.centerY.equalTo(friendLabel)
+            make.centerY.equalToSuperview()
+            make.height.equalTo(19)
+            make.width.equalTo(19)
         }
         
         friendTableView.snp.makeConstraints { make in
