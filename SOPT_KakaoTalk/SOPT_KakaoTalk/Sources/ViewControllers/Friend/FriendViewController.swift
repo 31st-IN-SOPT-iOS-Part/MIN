@@ -33,19 +33,19 @@ class FriendViewController: UIViewController {
     //MARK: - Variables
     
     var friendList: [FriendModel] = [
-        FriendModel(friendProfileImage: "profileImage1", friendName: "안솝트", friendMessage: "언제 볼 건데?"),
-        FriendModel(friendProfileImage: "profileImage2", friendName: "최솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage3", friendName: "정솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage4", friendName: "강솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage5", friendName: "오솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage6", friendName: "황솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage7", friendName: "최솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage8", friendName: "고솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage9", friendName: "하솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage6", friendName: "황솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage7", friendName: "최솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage8", friendName: "고솝트", friendMessage: "살려줘요"),
-        FriendModel(friendProfileImage: "profileImage9", friendName: "하솝트", friendMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage1", friendName: "안솝트", friendStateMessage: "언제 볼 건데?"),
+        FriendModel(friendProfileImage: "profileImage2", friendName: "최솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage3", friendName: "정솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage4", friendName: "강솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage5", friendName: "오솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage6", friendName: "황솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage7", friendName: "최솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage8", friendName: "고솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage9", friendName: "하솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage6", friendName: "황솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage7", friendName: "최솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage8", friendName: "고솝트", friendStateMessage: "살려줘요"),
+        FriendModel(friendProfileImage: "profileImage9", friendName: "하솝트", friendStateMessage: "살려줘요"),
     ]
     
 

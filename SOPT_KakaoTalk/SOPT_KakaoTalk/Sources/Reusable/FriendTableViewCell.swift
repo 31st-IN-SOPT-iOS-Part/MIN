@@ -84,6 +84,6 @@ extension FriendTableViewCell {
     func dataBind(dataModel: FriendModel) {
         friendProfileImage.image = UIImage(named: dataModel.friendProfileImage)
         friendNameLabel.text = dataModel.friendName
-        friendMessageLabel.text = dataModel.friendMessage
+        friendMessageLabel.text = dataModel.friendStateMessage
     }
 }
