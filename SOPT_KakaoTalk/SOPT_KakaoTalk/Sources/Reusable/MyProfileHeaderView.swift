@@ -59,7 +59,7 @@ class MyProfileHeaderView: UITableViewHeaderFooterView {
 
 extension MyProfileHeaderView {
     
-    // MARK: - Layout
+    // MARK: - Layout  
     
     private func layout() {
         contentView.addSubviews([myProfileImage, myNameLabel, myMessageLabel, separatorLine])
