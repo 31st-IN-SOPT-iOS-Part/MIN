@@ -29,12 +29,13 @@ class ChatViewController: UIViewController {
         $0.textColor = 0xA6A6A6.color
     }
     
-    private let setButton = UIButton().then {
+    private lazy var setButton = UIButton().then {
         $0.setImage(UIImage(named: "iconSetting"), for: .normal)
     }
     
-    private let addButton = UIButton().then {
+    private lazy var addButton = UIButton().then {
         $0.setImage(UIImage(named: "iconPlus"), for: .normal)
+        $0.addTarget(self, action: #selector(tapAddButton), for: .touchUpInside)
     }
     
     private lazy var chatCollectionView: UICollectionView = {
@@ -78,6 +79,21 @@ class ChatViewController: UIViewController {
         ChatModel(profileImage: "profileImage9", name: "윤솝트", message: "피곤해", time: "오후 9:41")
     ]
     
+    // MARK: - Functions
+    
+    private func presentToPhotoGrid() {
+        let photoGridVC = PhotoGridViewController()
+        photoGridVC.modalPresentationStyle = .overFullScreen
+        self.present(photoGridVC, animated: true, completion: nil)
+    }
+    
+    // MARK: - Objc functions
+    
+    @objc
+    private func tapAddButton() {
+        presentToPhotoGrid()
+    }
+    
     
     // MARK: - Life Cycles
 
@@ -85,7 +101,6 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 
         layout()
-        config()
         register()
     }
 
@@ -140,10 +155,6 @@ extension ChatViewController {
     
     
     // MARK: - General
-    
-    private func config() {
-        
-    }
     
     private func register() {
         chatCollectionView.register(ChatCollectionViewCell.self, forCellWithReuseIdentifier: ChatCollectionViewCell.identifier)
