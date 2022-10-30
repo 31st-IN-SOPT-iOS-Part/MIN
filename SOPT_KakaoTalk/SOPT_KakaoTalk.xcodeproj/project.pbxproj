@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB0DEB80290A24A200C37A27 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0DEB7F290A24A200C37A27 /* ChatCollectionViewCell.swift */; };
 		AB0DEB82290A29B000C37A27 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0DEB81290A29B000C37A27 /* ChatModel.swift */; };
+		AB206DE2290E5CF200EA4A65 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB206DE1290E5CF200EA4A65 /* PhotoCollectionViewCell.swift */; };
+		AB206DE4290E60D600EA4A65 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB206DE3290E60D600EA4A65 /* PhotoModel.swift */; };
 		AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */; };
 		AB2D6D8C29058227003D43F8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8B29058227003D43F8 /* ChatViewController.swift */; };
 		AB2D6D8E29058237003D43F8 /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8D29058237003D43F8 /* SharpViewController.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		AB0DEB7F290A24A200C37A27 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB0DEB81290A29B000C37A27 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		AB206DE1290E5CF200EA4A65 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB206DE3290E60D600EA4A65 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabbarController.swift; sourceTree = "<group>"; };
 		AB2D6D8B29058227003D43F8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		AB2D6D8D29058237003D43F8 /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 				ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */,
 				AB0DEB7F290A24A200C37A27 /* ChatCollectionViewCell.swift */,
 				AB2DC39D290ACCCB00210DD2 /* ChatCollectionReusableView.swift */,
+				AB206DE1290E5CF200EA4A65 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			children = (
 				AB8EA14E2906755C00AFAA61 /* FriendModel.swift */,
 				AB0DEB81290A29B000C37A27 /* ChatModel.swift */,
+				AB206DE3290E60D600EA4A65 /* PhotoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,8 +317,10 @@
 				AB2D6D8C29058227003D43F8 /* ChatViewController.swift in Sources */,
 				AB2DC3A0290AD3EE00210DD2 /* PhotoGridViewController.swift in Sources */,
 				ABE9339A28F98FE10074E18B /* UIStackView.swift in Sources */,
+				AB206DE4290E60D600EA4A65 /* PhotoModel.swift in Sources */,
 				AB2DC39E290ACCCB00210DD2 /* ChatCollectionReusableView.swift in Sources */,
 				AB2D6D9029058242003D43F8 /* ShopViewController.swift in Sources */,
+				AB206DE2290E5CF200EA4A65 /* PhotoCollectionViewCell.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
 				ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */,
 				AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */,
