@@ -19,6 +19,7 @@ class PhotoGridViewController: UIViewController {
     private let titleView = UIView()
     private lazy var dismissButton = UIButton().then {
         $0.setImage(UIImage(named: "iconClose"), for: .normal)
+        $0.addTarget(self, action: #selector(tapDismissButton), for: .touchUpInside)
     }
     
     private let photoGridTitle = UILabel().then {
@@ -81,6 +82,19 @@ class PhotoGridViewController: UIViewController {
     final let photoLineSpacing: CGFloat = 7
     final let photoInterItemSpacing: CGFloat = 9
     final let photoCellHeight: CGFloat = 119
+    
+    // MARK: - Objc functions
+    
+    @objc
+    private func tapDismissButton() {
+        dismissVC()
+    }
+    
+    // MARK: - Private functions
+    
+    private func dismissVC() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Life Cycles
     
