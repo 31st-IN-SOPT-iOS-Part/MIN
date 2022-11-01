@@ -31,6 +31,7 @@ class PhotoGridViewController: UIViewController {
         $0.setTitle("전송", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 14)
+        
     }
     
     private lazy var photoCollectionView: UICollectionView = {
@@ -43,6 +44,7 @@ class PhotoGridViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.allowsMultipleSelection = true
         
         return collectionView
     }()
@@ -73,8 +75,11 @@ class PhotoGridViewController: UIViewController {
         PhotoModel(image: "galleryImage20"),
         PhotoModel(image: "galleryImage21"),
         PhotoModel(image: "galleryImage22"),
-        PhotoModel(image: "galleryImage23")
+        PhotoModel(image: "galleryImage23") 
     ]
+    
+    var photoCount = 0
+    
     
     // MARK: - Constants
     
@@ -147,7 +152,7 @@ extension PhotoGridViewController {
             make.height.equalTo(calculateHeight())
         }
     }
-    
+     
     // MARK: - General
     
     private func config() {
@@ -163,6 +168,14 @@ extension PhotoGridViewController {
         let heightCount = count/3 + count.truncatingRemainder(dividingBy: 3)
         return heightCount * photoCellHeight + (heightCount-1) * photoLineSpacing + photoInsets.top + photoInsets.bottom
     }
+    
+    private func customSendButton() {
+        if photoCount == 0 {
+            sendbutton.setTitle("전송", for: .normal)
+        } else {
+            sendbutton.setTitle("\(photoCount)전송", for: .normal)
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -177,9 +190,30 @@ extension PhotoGridViewController: UICollectionViewDataSource {
         
         cell.dataBind(photoModel: photoList[indexPath.row])
         return cell
+    } 
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
+        
+        photoCount += 1
+        cell.photo.layer.borderColor = CGColor(red: 252/255, green: 220/255, blue: 0, alpha: 1.0)
+        cell.photo.layer.borderWidth = 3
+        cell.selectNumberView.isHidden = false
+        cell.selectNumberLabel.text = "\(photoCount)"
+        cell.selectNumberView.layer.cornerRadius = cell.selectNumberView.frame.size.width/2
+        
+        customSendButton()
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
+        
+        photoCount -= 1
+        cell.photo.layer.borderWidth = 0
+        cell.selectNumberView.isHidden = true
+        
+        customSendButton()
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

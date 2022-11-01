@@ -17,10 +17,20 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
-    private let photo = UIImageView()
+    let photo = UIImageView()
+    let selectNumberView = UIView().then {
+        $0.backgroundColor = 0xF6DD2A.color
+        $0.isHidden = true
+    }
+
+    
+    let selectNumberLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 10)
+    }
+    
     
     // MARK: - Life Cycles
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,19 +41,33 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
+
 
 // MARK: - Extensions
 
 extension PhotoCollectionViewCell {
-     
+        
     // MARK: - Layout
-    
+        
     private func layout() {
-        contentView.addSubviews([photo])
+        contentView.addSubviews([photo, selectNumberView])
+        selectNumberView.addSubview(selectNumberLabel)
         
         photo.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        
+        selectNumberView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(4)
+            make.trailing.equalToSuperview().offset(-4)
+            make.width.equalTo(18)
+            make.height.equalTo(18)
+        }
+        
+        selectNumberLabel.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
         }
     }
     
@@ -57,5 +81,5 @@ extension PhotoCollectionViewCell {
     func dataBind(photoModel: PhotoModel) {
         photo.image = UIImage(named: photoModel.image)
     }
-    
+        
 }

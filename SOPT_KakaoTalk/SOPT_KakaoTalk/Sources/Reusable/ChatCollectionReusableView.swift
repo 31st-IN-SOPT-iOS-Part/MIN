@@ -34,6 +34,7 @@ class ChatCollectionReusableView: UICollectionReusableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 // MARK: - Extensions
@@ -50,4 +51,5 @@ extension ChatCollectionReusableView {
             make.height.equalTo(71)
         }
     }
+
 }
