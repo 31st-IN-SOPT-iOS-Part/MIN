@@ -48,6 +48,8 @@ class FriendViewController: UIViewController {
         FriendModel(friendProfileImage: "profileImage9", friendName: "하솝트", friendStateMessage: "살려줘요"),
     ]
     
+    var name: String?
+    
 
     // MARK: - LifeCycle
     
@@ -60,9 +62,20 @@ class FriendViewController: UIViewController {
         
     }
     
-    // MARK: - Properties
+    // MARK: - Private functions
     
-    var name: String?
+    private func goToProfileDetailVC() {
+        let profileDetailVC = ProfileDetailViewController()
+        profileDetailVC.modalPresentationStyle = .overFullScreen
+        self.present(profileDetailVC, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - Objc functions
+    
+    @objc private func tapProfileHeaderView() {
+        goToProfileDetailVC()
+    }
 
 }
 
@@ -100,7 +113,6 @@ extension FriendViewController {
             make.bottom.equalToSuperview()
             make.height.equalTo(50*friendList.count + 73)
         }
-        
     }
     
     // MARK: - General
@@ -136,6 +148,9 @@ extension FriendViewController: UITableViewDataSource {
 extension FriendViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: MyProfileHeaderView.identifer) as? MyProfileHeaderView else {return UIView()}
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapProfileHeaderView))
+        headerView.addGestureRecognizer(gesture)
         
         return headerView
     }
