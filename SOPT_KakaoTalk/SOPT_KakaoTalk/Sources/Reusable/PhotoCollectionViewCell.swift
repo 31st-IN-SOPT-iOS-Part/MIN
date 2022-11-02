@@ -48,7 +48,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 // MARK: - Extensions
 
 extension PhotoCollectionViewCell {
-        
+         
     // MARK: - Layout
         
     private func layout() {

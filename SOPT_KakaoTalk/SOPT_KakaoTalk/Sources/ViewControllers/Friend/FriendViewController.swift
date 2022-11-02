@@ -141,6 +141,15 @@ extension FriendViewController: UITableViewDataSource {
         cell.dataBind(dataModel: friendList[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "삭제") {_,_,_ in
+            self.friendList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -150,7 +159,7 @@ extension FriendViewController: UITableViewDelegate {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: MyProfileHeaderView.identifer) as? MyProfileHeaderView else {return UIView()}
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tapProfileHeaderView))
-        headerView.addGestureRecognizer(gesture)
+        headerView.addGestureRecognizer(gesture) 
         
         return headerView
     }
