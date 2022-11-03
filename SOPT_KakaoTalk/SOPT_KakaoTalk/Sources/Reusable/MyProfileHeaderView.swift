@@ -24,7 +24,7 @@ class MyProfileHeaderView: UITableViewHeaderFooterView {
         $0.image = UIImage(named: "imageFriend")
     }
     
-    private let myNameLabel = UILabel().then {
+    let myNameLabel = UILabel().then {
         $0.text = "김솝트"
         $0.font = .systemFont(ofSize: 16, weight: .semibold)
         $0.textColor = 0x191919.color

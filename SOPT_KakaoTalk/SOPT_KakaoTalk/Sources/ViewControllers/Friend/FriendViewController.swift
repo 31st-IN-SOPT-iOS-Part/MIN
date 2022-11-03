@@ -50,7 +50,6 @@ class FriendViewController: UIViewController {
     
     var name: String?
     
-
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -67,6 +66,8 @@ class FriendViewController: UIViewController {
     private func goToProfileDetailVC() {
         let profileDetailVC = ProfileDetailViewController()
         profileDetailVC.modalPresentationStyle = .overFullScreen
+        profileDetailVC.name = name
+        profileDetailVC.dataBind()
         self.present(profileDetailVC, animated: true, completion: nil)
     }
     
@@ -159,7 +160,9 @@ extension FriendViewController: UITableViewDelegate {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: MyProfileHeaderView.identifer) as? MyProfileHeaderView else {return UIView()}
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tapProfileHeaderView))
-        headerView.addGestureRecognizer(gesture) 
+        headerView.addGestureRecognizer(gesture)
+        
+        name = headerView.myNameLabel.text
         
         return headerView
     }
