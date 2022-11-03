@@ -50,6 +50,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         photo.layer.borderWidth = 0
         selectNumberView.isHidden = true
     }
+    
 }
 
 

@@ -20,7 +20,8 @@ class ChatCollectionReusableView: UICollectionReusableView {
     // MARK: - UI Components
     private let adImage = UIImageView().then {
         $0.image = UIImage(named: "AdImage")
-        $0.contentMode = .scaleAspectFit
+        $0.layer.cornerRadius = 6
+        $0.layer.masksToBounds = true
     }
     
     // MARK: - Life Cycles
@@ -47,7 +48,8 @@ extension ChatCollectionReusableView {
         
         adImage.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
             make.height.equalTo(71)
         }
     }
