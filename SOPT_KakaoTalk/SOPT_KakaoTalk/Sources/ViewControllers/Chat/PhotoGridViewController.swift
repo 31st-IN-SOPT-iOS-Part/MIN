@@ -205,14 +205,18 @@ extension PhotoGridViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
         
-        if cell.selectNumberView.isHidden {
-            photoIndexArray.append(indexPath.item)
+        if indexPath.item == 0 {
+            print("카메라 불러오기")
         } else {
-            photoIndexArray.remove(at: Int(cell.selectNumberLabel.text!)!-1)
+            if cell.selectNumberView.isHidden {
+                photoIndexArray.append(indexPath.item)
+            } else {
+                photoIndexArray.remove(at: Int(cell.selectNumberLabel.text!)!-1)
+            }
+            
+            customSendButton()
+            collectionView.reloadData()
         }
-        
-        customSendButton()
-        collectionView.reloadData()
     }
 }
 
