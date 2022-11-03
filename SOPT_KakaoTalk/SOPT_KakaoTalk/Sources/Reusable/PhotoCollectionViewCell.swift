@@ -17,12 +17,14 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
-    let photo = UIImageView()
+    let photo = UIImageView().then {
+        $0.layer.borderColor = CGColor(red: 252/255, green: 220/255, blue: 0, alpha: 1.0)
+        $0.layer.borderWidth = 0
+    }
     let selectNumberView = UIView().then {
         $0.backgroundColor = 0xF6DD2A.color
         $0.isHidden = true
     }
-
     
     let selectNumberLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 10)
@@ -42,6 +44,12 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        photo.layer.borderWidth = 0
+        selectNumberView.isHidden = true
+    }
 }
 
 

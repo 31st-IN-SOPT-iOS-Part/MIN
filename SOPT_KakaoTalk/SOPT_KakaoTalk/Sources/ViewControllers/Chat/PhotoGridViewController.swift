@@ -78,8 +78,7 @@ class PhotoGridViewController: UIViewController {
         PhotoModel(image: "galleryImage23") 
     ]
     
-    var photoCount = 0
-    
+    var photoIndexArray: [Int] = []
     
     // MARK: - Constants
     
@@ -170,10 +169,10 @@ extension PhotoGridViewController {
     }
     
     private func customSendButton() {
-        if photoCount == 0 {
+        if photoIndexArray.count == 0 {
             sendbutton.setTitle("전송", for: .normal)
         } else {
-            sendbutton.setTitle("\(photoCount)전송", for: .normal)
+            sendbutton.setTitle("\(photoIndexArray.count)전송", for: .normal)
         }
     }
 }
@@ -188,31 +187,32 @@ extension PhotoGridViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell()}
         
+        if !photoIndexArray.isEmpty {
+            for i in 0...photoIndexArray.count-1 {
+                if indexPath.item == photoIndexArray[i] {
+                    cell.selectNumberView.layer.cornerRadius = cell.selectNumberView.frame.size.width/2
+                    cell.photo.layer.borderWidth = 3
+                    cell.selectNumberView.isHidden = false
+                    cell.selectNumberLabel.text = "\(i+1)"
+                }
+            }
+        }
+        
         cell.dataBind(photoModel: photoList[indexPath.row])
         return cell
-    } 
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
         
-        photoCount += 1
-        cell.photo.layer.borderColor = CGColor(red: 252/255, green: 220/255, blue: 0, alpha: 1.0)
-        cell.photo.layer.borderWidth = 3
-        cell.selectNumberView.isHidden = false
-        cell.selectNumberLabel.text = "\(photoCount)"
-        cell.selectNumberView.layer.cornerRadius = cell.selectNumberView.frame.size.width/2
+        if cell.selectNumberView.isHidden {
+            photoIndexArray.append(indexPath.item)
+        } else {
+            photoIndexArray.remove(at: Int(cell.selectNumberLabel.text!)!-1)
+        }
         
         customSendButton()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
-        
-        photoCount -= 1
-        cell.photo.layer.borderWidth = 0
-        cell.selectNumberView.isHidden = true
-        
-        customSendButton()
+        collectionView.reloadData()
     }
 }
 
