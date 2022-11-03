@@ -27,12 +27,20 @@ class PhotoGridViewController: UIViewController {
         $0.font = .systemFont(ofSize: 16)
     }
     
-    private lazy var sendbutton = UIButton().then {
+    private lazy var sendButton = UIButton().then {
         $0.setTitle("전송", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 14)
-        
     }
+    
+//    private let sendButton = UIButton().then {
+//      let grayButtonText = NSAttributedString(string: "", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.gray])
+//      let blackButtonText = NSAttributedString(string: "전송", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.black])
+//      let buttonTitle = NSMutableAttributedString(attributedString: grayButtonText)
+//      buttonTitle.append(blackButtonText)
+//
+//      $0.setAttributedTitle(buttonTitle, for: .normal)
+//    }
     
     private lazy var photoCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -120,7 +128,7 @@ extension PhotoGridViewController {
     
     private func layout() {
         view.addSubviews([titleView, photoCollectionView])
-        titleView.addSubviews([dismissButton, photoGridTitle, sendbutton])
+        titleView.addSubviews([dismissButton, photoGridTitle, sendButton])
         
         titleView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
@@ -139,7 +147,7 @@ extension PhotoGridViewController {
             make.centerY.equalToSuperview()
         }
         
-        sendbutton.snp.makeConstraints { make in
+        sendButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().offset(-10)
         }
@@ -169,10 +177,16 @@ extension PhotoGridViewController {
     }
     
     private func customSendButton() {
-        if photoIndexArray.count == 0 {
-            sendbutton.setTitle("전송", for: .normal)
+        let sendText = NSAttributedString(string: "전송", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.black])
+        
+        if photoIndexArray.count == 0 { 
+            let buttonTitle = NSMutableAttributedString(attributedString: sendText)
+            sendButton.setAttributedTitle(buttonTitle, for: .normal)
         } else {
-            sendbutton.setTitle("\(photoIndexArray.count)전송", for: .normal)
+            let countText = NSAttributedString(string: "\(photoIndexArray.count)", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: 0xF6DD2A.color])
+            let buttonTitle = NSMutableAttributedString(attributedString: countText)
+            buttonTitle.append(sendText)
+            sendButton.setAttributedTitle(buttonTitle, for: .normal)
         }
     }
 }
