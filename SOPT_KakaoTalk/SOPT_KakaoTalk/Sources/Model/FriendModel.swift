@@ -10,5 +10,5 @@ import Foundation
 struct FriendModel {
     let friendProfileImage: String
     let friendName: String
-    let friendStateMessage: String
+    let friendStateMessage: String?
 }

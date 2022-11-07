@@ -22,18 +22,15 @@ class ChatCollectionViewCell: UICollectionViewCell {
     
     private let profileImage = UIImageView()
     private let nameLabel = UILabel().then {
-        $0.text = "test"
         $0.font = .systemFont(ofSize: 12, weight: .semibold)
     }
     
     private let messageLabel = UILabel().then {
-        $0.text = "test test"
         $0.font = .systemFont(ofSize: 11)
         $0.textColor = 0xA6A6A6.color
     }
     
     private let timeLabel = UILabel().then {
-        $0.text = "시간"
         $0.font = .systemFont(ofSize: 8)
         $0.textColor = 0xA6A6A6.color
     }

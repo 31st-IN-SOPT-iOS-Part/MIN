@@ -33,15 +33,6 @@ class PhotoGridViewController: UIViewController {
         $0.titleLabel?.font = .systemFont(ofSize: 14)
     }
     
-//    private let sendButton = UIButton().then {
-//      let grayButtonText = NSAttributedString(string: "", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.gray])
-//      let blackButtonText = NSAttributedString(string: "전송", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.black])
-//      let buttonTitle = NSMutableAttributedString(attributedString: grayButtonText)
-//      buttonTitle.append(blackButtonText)
-//
-//      $0.setAttributedTitle(buttonTitle, for: .normal)
-//    }
-    
     private lazy var photoCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -58,33 +49,6 @@ class PhotoGridViewController: UIViewController {
     }()
     
     // MARK: - Variables
-    
-    var photoList: [PhotoModel] = [
-        PhotoModel(image: "Frame 17"),
-        PhotoModel(image: "galleryImage1"),
-        PhotoModel(image: "galleryImage2"),
-        PhotoModel(image: "galleryImage3"),
-        PhotoModel(image: "galleryImage4"),
-        PhotoModel(image: "galleryImage5"),
-        PhotoModel(image: "galleryImage6"),
-        PhotoModel(image: "galleryImage7"),
-        PhotoModel(image: "galleryImage8"),
-        PhotoModel(image: "galleryImage9"),
-        PhotoModel(image: "galleryImage10"),
-        PhotoModel(image: "galleryImage11"),
-        PhotoModel(image: "galleryImage12"),
-        PhotoModel(image: "galleryImage13"),
-        PhotoModel(image: "galleryImage14"),
-        PhotoModel(image: "galleryImage15"),
-        PhotoModel(image: "galleryImage16"),
-        PhotoModel(image: "galleryImage17"),
-        PhotoModel(image: "galleryImage18"),
-        PhotoModel(image: "galleryImage19"),
-        PhotoModel(image: "galleryImage20"),
-        PhotoModel(image: "galleryImage21"),
-        PhotoModel(image: "galleryImage22"),
-        PhotoModel(image: "galleryImage23") 
-    ]
     
     var photoIndexArray: [Int] = []
     
