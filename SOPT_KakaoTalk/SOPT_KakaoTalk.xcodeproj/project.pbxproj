@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0DEB80290A24A200C37A27 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0DEB7F290A24A200C37A27 /* ChatCollectionViewCell.swift */; };
+		AB0DEB82290A29B000C37A27 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0DEB81290A29B000C37A27 /* ChatModel.swift */; };
+		AB206DE2290E5CF200EA4A65 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB206DE1290E5CF200EA4A65 /* PhotoCollectionViewCell.swift */; };
+		AB206DE4290E60D600EA4A65 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB206DE3290E60D600EA4A65 /* PhotoModel.swift */; };
+		AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */; };
+		AB2D6D8C29058227003D43F8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8B29058227003D43F8 /* ChatViewController.swift */; };
+		AB2D6D8E29058237003D43F8 /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8D29058237003D43F8 /* SharpViewController.swift */; };
+		AB2D6D9029058242003D43F8 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D8F29058242003D43F8 /* ShopViewController.swift */; };
+		AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D912905824B003D43F8 /* MoreViewController.swift */; };
+		AB2DC39E290ACCCB00210DD2 /* ChatCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DC39D290ACCCB00210DD2 /* ChatCollectionReusableView.swift */; };
+		AB2DC3A0290AD3EE00210DD2 /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DC39F290AD3EE00210DD2 /* PhotoGridViewController.swift */; };
+		AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */; };
+		AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = AB8EA14B290673C500AFAA61 /* SwiftyColor */; };
+		AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14E2906755C00AFAA61 /* FriendModel.swift */; };
+		ABC434BB29083DFA001FE626 /* MyProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */; };
 		ABC71BB52903E4B2002EF41D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ABC71BB42903E4B2002EF41D /* Then */; };
 		ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334928F7F1370074E18B /* AppDelegate.swift */; };
 		ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9334B28F7F1370074E18B /* SceneDelegate.swift */; };
@@ -18,12 +33,26 @@
 		ABE9336328F7F2D00074E18B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336228F7F2D00074E18B /* UIView.swift */; };
 		ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336428F7F3290074E18B /* SignupViewController.swift */; };
 		ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */; };
-		ABE9336A28F7F7D00074E18B /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */; };
+		ABE9336A28F7F7D00074E18B /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336928F7F7D00074E18B /* FriendViewController.swift */; };
 		ABE9336C28F7F9BB0074E18B /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */; };
 		ABE9339A28F98FE10074E18B /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9339928F98FE10074E18B /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0DEB7F290A24A200C37A27 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB0DEB81290A29B000C37A27 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		AB206DE1290E5CF200EA4A65 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB206DE3290E60D600EA4A65 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabbarController.swift; sourceTree = "<group>"; };
+		AB2D6D8B29058227003D43F8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AB2D6D8D29058237003D43F8 /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
+		AB2D6D8F29058242003D43F8 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		AB2D6D912905824B003D43F8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		AB2DC39D290ACCCB00210DD2 /* ChatCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionReusableView.swift; sourceTree = "<group>"; };
+		AB2DC39F290AD3EE00210DD2 /* PhotoGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
+		AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		AB8EA14E2906755C00AFAA61 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileHeaderView.swift; sourceTree = "<group>"; };
 		ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_KakaoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE9334928F7F1370074E18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE9334B28F7F1370074E18B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +64,7 @@
 		ABE9336228F7F2D00074E18B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		ABE9336428F7F3290074E18B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
+		ABE9336928F7F7D00074E18B /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		ABE9339928F98FE10074E18B /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE9336028F7F27A0074E18B /* SnapKit in Frameworks */,
+				AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */,
 				ABC71BB52903E4B2002EF41D /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +83,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2D6D8029057B4B003D43F8 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */,
+				ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */,
+				AB0DEB7F290A24A200C37A27 /* ChatCollectionViewCell.swift */,
+				AB2DC39D290ACCCB00210DD2 /* ChatCollectionReusableView.swift */,
+				AB206DE1290E5CF200EA4A65 /* PhotoCollectionViewCell.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		AB2D6D8529058112003D43F8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
+				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
+				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AB2D6D8629058142003D43F8 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9336928F7F7D00074E18B /* FriendViewController.swift */,
+				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		AB2D6D872905814E003D43F8 /* Sharp */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D6D8D29058237003D43F8 /* SharpViewController.swift */,
+			);
+			path = Sharp;
+			sourceTree = "<group>";
+		};
+		AB2D6D88290581AC003D43F8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D6D8B29058227003D43F8 /* ChatViewController.swift */,
+				AB2DC39F290AD3EE00210DD2 /* PhotoGridViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AB2D6D89290581BC003D43F8 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D6D8F29058242003D43F8 /* ShopViewController.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		AB2D6D8A290581C4003D43F8 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D6D912905824B003D43F8 /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		AB8EA14D2906754C00AFAA61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EA14E2906755C00AFAA61 /* FriendModel.swift */,
+				AB0DEB81290A29B000C37A27 /* ChatModel.swift */,
+				AB206DE3290E60D600EA4A65 /* PhotoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ABE9333D28F7F1370074E18B = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +205,12 @@
 		ABE9337428F804740074E18B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				AB8EA14D2906754C00AFAA61 /* Model */,
 				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
 				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
 				ABE9336128F7F2C50074E18B /* Extensions */,
 				ABE9337528F8048C0074E18B /* ViewControllers */,
+				AB2D6D8029057B4B003D43F8 /* Reusable */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -112,11 +218,13 @@
 		ABE9337528F8048C0074E18B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ABE9334D28F7F1370074E18B /* LoginViewController.swift */,
-				ABE9336428F7F3290074E18B /* SignupViewController.swift */,
-				ABE9336628F7F40F0074E18B /* WelcomeViewController.swift */,
-				ABE9336928F7F7D00074E18B /* ProfileListViewController.swift */,
-				ABE9336B28F7F9BA0074E18B /* ProfileDetailViewController.swift */,
+				AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */,
+				AB2D6D8529058112003D43F8 /* Auth */,
+				AB2D6D8629058142003D43F8 /* Friend */,
+				AB2D6D88290581AC003D43F8 /* Chat */,
+				AB2D6D872905814E003D43F8 /* Sharp */,
+				AB2D6D89290581BC003D43F8 /* Shop */,
+				AB2D6D8A290581C4003D43F8 /* More */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -140,6 +248,7 @@
 			packageProductDependencies = (
 				ABE9335F28F7F27A0074E18B /* SnapKit */,
 				ABC71BB42903E4B2002EF41D /* Then */,
+				AB8EA14B290673C500AFAA61 /* SwiftyColor */,
 			);
 			productName = SOPT_KakaoTalk;
 			productReference = ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */;
@@ -172,6 +281,7 @@
 			packageReferences = (
 				ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */,
 				ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */,
+				AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
 			);
 			productRefGroup = ABE9334728F7F1370074E18B /* Products */;
 			projectDirPath = "";
@@ -200,15 +310,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC434BB29083DFA001FE626 /* MyProfileHeaderView.swift in Sources */,
 				ABE9336328F7F2D00074E18B /* UIView.swift in Sources */,
+				AB0DEB82290A29B000C37A27 /* ChatModel.swift in Sources */,
+				AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */,
+				AB2D6D8C29058227003D43F8 /* ChatViewController.swift in Sources */,
+				AB2DC3A0290AD3EE00210DD2 /* PhotoGridViewController.swift in Sources */,
 				ABE9339A28F98FE10074E18B /* UIStackView.swift in Sources */,
+				AB206DE4290E60D600EA4A65 /* PhotoModel.swift in Sources */,
+				AB2DC39E290ACCCB00210DD2 /* ChatCollectionReusableView.swift in Sources */,
+				AB2D6D9029058242003D43F8 /* ShopViewController.swift in Sources */,
+				AB206DE2290E5CF200EA4A65 /* PhotoCollectionViewCell.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
 				ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */,
-				ABE9336A28F7F7D00074E18B /* ProfileListViewController.swift in Sources */,
+				AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */,
+				ABE9336A28F7F7D00074E18B /* FriendViewController.swift in Sources */,
 				ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */,
 				ABE9336C28F7F9BB0074E18B /* ProfileDetailViewController.swift in Sources */,
+				AB2D6D8E29058237003D43F8 /* SharpViewController.swift in Sources */,
+				AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */,
 				ABE9334A28F7F1370074E18B /* AppDelegate.swift in Sources */,
 				ABE9334C28F7F1370074E18B /* SceneDelegate.swift in Sources */,
+				AB0DEB80290A24A200C37A27 /* ChatCollectionViewCell.swift in Sources */,
+				AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/SwiftyColor";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -447,6 +579,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AB8EA14B290673C500AFAA61 /* SwiftyColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */;
+			productName = SwiftyColor;
+		};
 		ABC71BB42903E4B2002EF41D /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */;
