@@ -11,7 +11,7 @@ struct PhotoModel {
     let image: String
 }
 
-let photoList: [PhotoModel] = [
+var photoList: [PhotoModel] = [
     PhotoModel(image: "Frame 17"),
     PhotoModel(image: "galleryImage1"),
     PhotoModel(image: "galleryImage2"),

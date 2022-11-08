@@ -50,7 +50,9 @@ class PhotoGridViewController: UIViewController {
     
     // MARK: - Variables
     
-    var photoIndexArray: [Int] = []
+    var checkArray: [Bool] = [false, ]
+    var itemIndexArray: [Int] = []
+    var count = 0
     
     // MARK: - Constants
     
@@ -143,16 +145,16 @@ extension PhotoGridViewController {
     private func customSendButton() {
         let sendText = NSAttributedString(string: "전송", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.black])
         
-        if photoIndexArray.count == 0 { 
+        if itemIndexArray.count == 0 {
             let buttonTitle = NSMutableAttributedString(attributedString: sendText)
             sendButton.setAttributedTitle(buttonTitle, for: .normal)
         } else {
-            let countText = NSAttributedString(string: "\(photoIndexArray.count)", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: 0xF6DD2A.color])
+            let countText = NSAttributedString(string: "\(itemIndexArray.count)", attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: 0xF6DD2A.color])
             let buttonTitle = NSMutableAttributedString(attributedString: countText)
             buttonTitle.append(sendText)
             sendButton.setAttributedTitle(buttonTitle, for: .normal)
         }
-    }
+    } 
 }
 
 // MARK: - UICollectionViewDataSource
@@ -165,17 +167,13 @@ extension PhotoGridViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell()}
         
-        if !photoIndexArray.isEmpty {
-            for i in 0...photoIndexArray.count-1 {
-                if indexPath.item == photoIndexArray[i] {
-                    cell.selectNumberView.layer.cornerRadius = cell.selectNumberView.frame.size.width/2
-                    cell.photo.layer.borderWidth = 3
-                    cell.selectNumberView.isHidden = false
-                    cell.selectNumberLabel.text = "\(i+1)"
-                }
-            }
+        if itemIndexArray.contains(indexPath.item) {
+            let index = itemIndexArray.firstIndex(of: indexPath.item)!
+            cell.setSelected(selectNumber: index)
+        } else {
+            cell.setDeselected()
         }
-        
+
         cell.dataBind(photoModel: photoList[indexPath.row])
         return cell
     }
@@ -183,21 +181,17 @@ extension PhotoGridViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
         
-        if indexPath.item == 0 {
-            print("카메라 불러오기")
+        if cell.selectNumberView.isHidden {
+            itemIndexArray.append(indexPath.item)
         } else {
-            if cell.selectNumberView.isHidden {
-                photoIndexArray.append(indexPath.item)
-            } else {
-                photoIndexArray.remove(at: Int(cell.selectNumberLabel.text!)!-1)
-            }
-            
-            customSendButton()
-            collectionView.reloadData()
+            itemIndexArray.remove(at: Int(cell.selectNumberLabel.text!)!-1)
         }
+        
+        customSendButton()
+        collectionView.reloadData()
     }
 }
-
+ 
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension PhotoGridViewController: UICollectionViewDelegateFlowLayout {

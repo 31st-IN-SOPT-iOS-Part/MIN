@@ -29,8 +29,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     let selectNumberLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 10)
     }
-    
-    
+
     // MARK: - Life Cycles
     
     override init(frame: CGRect) {
@@ -43,14 +42,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        photo.layer.borderWidth = 0
-        selectNumberView.isHidden = true
-    }
-    
 }
 
 
@@ -90,5 +81,16 @@ extension PhotoCollectionViewCell {
     func dataBind(photoModel: PhotoModel) {
         photo.image = UIImage(named: photoModel.image)
     }
-        
+    
+    func setSelected(selectNumber: Int) {
+        photo.layer.borderWidth = 3
+        selectNumberView.layer.cornerRadius = selectNumberView.frame.size.width/2
+        selectNumberView.isHidden = false
+        selectNumberLabel.text = "\(selectNumber+1)"
+    }
+    
+    func setDeselected() {
+        photo.layer.borderWidth = 0
+        selectNumberView.isHidden = true
+    }
 }
