@@ -25,7 +25,7 @@ final class LoginViewController: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
         $0.layer.cornerRadius = 8
-        //$0.addTarget(self, action: #selector(touchupLoginButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(touchupLoginButton), for: .touchUpInside)
     }
     
     private let resultLabel = UILabel().then {
@@ -106,8 +106,41 @@ extension LoginViewController {
     }
     
     // MARK: - Action Helpers
+    
+    @objc
+    private func touchupLoginButton() {
+        if let email = emailView.popInput(),
+           let password = passwordView.popInput() {
+            let param = LoginRequestDto(email: email, password: password)
+            login(param: param)
+        }
+    }
 
     
     // MARK: - Network Helpers
-
+    
+    private func login(param: LoginRequestDto) {
+        userProvider.request(.login(param: param)) { response in
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if status >= 200 && status < 300 {
+                    do {
+                        self.loginData = try result.map(LoginResponseDto.self)
+                        if let result = self.loginData?.result {
+                            self.configResult(name: result.name)
+                        }
+                    }
+                    catch(let error) {
+                        print(error.localizedDescription)
+                    }
+                }
+                if status >= 400 {
+                    print("error")
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
