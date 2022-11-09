@@ -22,6 +22,7 @@
 		ABA58A9F291B802E00254691 /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A9E291B802E00254691 /* UserResponseDto.swift */; };
 		ABA58AA2291B818E00254691 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58AA1291B818E00254691 /* UserRouter.swift */; };
 		ABA58AA4291B880900254691 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58AA3291B880900254691 /* InputView.swift */; };
+		ABA58AA6291B885B00254691 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58AA5291B885B00254691 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		ABA58A9E291B802E00254691 /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
 		ABA58AA1291B818E00254691 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		ABA58AA3291B880900254691 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		ABA58AA5291B885B00254691 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		AB4D7ECA291B6E5B00A7D14D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ABA58AA5291B885B00254691 /* SignupViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				ABA58A95291B7B3400254691 /* Environment.swift in Sources */,
 				ABA58A97291B7C0A00254691 /* NetworkLoggerPlugin.swift in Sources */,
+				ABA58AA6291B885B00254691 /* SignupViewController.swift in Sources */,
 				ABA58A99291B7C5400254691 /* Encodable+.swift in Sources */,
 				ABA58AA2291B818E00254691 /* UserRouter.swift in Sources */,
 				AB4D7EB0291B6BCD00A7D14D /* AppDelegate.swift in Sources */,
