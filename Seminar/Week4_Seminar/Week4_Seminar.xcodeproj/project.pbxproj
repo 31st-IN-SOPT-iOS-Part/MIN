@@ -99,6 +99,8 @@
 		AB4D7EC5291B6DE700A7D14D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				ABA58A9A291B7CA800254691 /* RequestDto */,
+				ABA58A9B291B7CB000254691 /* ResponseDto */,
 				ABA58A96291B7C0A00254691 /* NetworkLoggerPlugin.swift */,
 			);
 			path = Network;
@@ -168,6 +170,20 @@
 				AB4D7EBA291B6BCF00A7D14D /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		ABA58A9A291B7CA800254691 /* RequestDto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RequestDto;
+			sourceTree = "<group>";
+		};
+		ABA58A9B291B7CB000254691 /* ResponseDto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResponseDto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
