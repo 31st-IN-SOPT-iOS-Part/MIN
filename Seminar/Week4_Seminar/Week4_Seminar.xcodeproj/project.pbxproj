@@ -20,6 +20,7 @@
 		ABA58A97291B7C0A00254691 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A96291B7C0A00254691 /* NetworkLoggerPlugin.swift */; };
 		ABA58A99291B7C5400254691 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A98291B7C5400254691 /* Encodable+.swift */; };
 		ABA58A9D291B7CFF00254691 /* UserRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A9C291B7CFF00254691 /* UserRequestDto.swift */; };
+		ABA58A9F291B802E00254691 /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A9E291B802E00254691 /* UserResponseDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		ABA58A96291B7C0A00254691 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		ABA58A98291B7C5400254691 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		ABA58A9C291B7CFF00254691 /* UserRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDto.swift; sourceTree = "<group>"; };
+		ABA58A9E291B802E00254691 /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		ABA58A9B291B7CB000254691 /* ResponseDto */ = {
 			isa = PBXGroup;
 			children = (
+				ABA58A9E291B802E00254691 /* UserResponseDto.swift */,
 			);
 			path = ResponseDto;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				ABA58A97291B7C0A00254691 /* NetworkLoggerPlugin.swift in Sources */,
 				ABA58A99291B7C5400254691 /* Encodable+.swift in Sources */,
 				AB4D7EB0291B6BCD00A7D14D /* AppDelegate.swift in Sources */,
+				ABA58A9F291B802E00254691 /* UserResponseDto.swift in Sources */,
 				AB4D7EB2291B6BCD00A7D14D /* SceneDelegate.swift in Sources */,
 				ABA58A9D291B7CFF00254691 /* UserRequestDto.swift in Sources */,
 			);
