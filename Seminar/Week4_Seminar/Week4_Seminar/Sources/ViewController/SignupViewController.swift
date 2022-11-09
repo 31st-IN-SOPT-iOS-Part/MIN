@@ -96,10 +96,10 @@ extension SignupViewController {
         passwordView.config(title: titles[2], placeholder: placeholders[2])
     }
     
-//    private func pushToLogin() {
-//        let loginVC = LoginViewController()
-//        self.navigationController?.pushViewController(loginVC, animated: true)
-//    }
+    private func pushToLogin() {
+        let loginVC = LoginViewController()
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
     
     // MARK: - Action Helpers
     
@@ -123,7 +123,7 @@ extension SignupViewController {
             case .success(let result):
                 let status = result.statusCode
                 if status >= 200 && status < 300 {
-                    print("성공!")
+                    self.pushToLogin()
                 } else if status >= 400 {
                 
                 }
