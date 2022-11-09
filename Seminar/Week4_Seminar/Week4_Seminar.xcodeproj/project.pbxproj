@@ -18,6 +18,7 @@
 		ABA58A93291B7A6100254691 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ABA58A92291B7A6100254691 /* SnapKit */; };
 		ABA58A95291B7B3400254691 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A94291B7B3400254691 /* Environment.swift */; };
 		ABA58A97291B7C0A00254691 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A96291B7C0A00254691 /* NetworkLoggerPlugin.swift */; };
+		ABA58A99291B7C5400254691 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA58A98291B7C5400254691 /* Encodable+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		AB4D7EBD291B6BCF00A7D14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABA58A94291B7B3400254691 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		ABA58A96291B7C0A00254691 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		ABA58A98291B7C5400254691 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		AB4D7ECC291B6E6D00A7D14D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ABA58A98291B7C5400254691 /* Encodable+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				AB4D7EB4291B6BCD00A7D14D /* ViewController.swift in Sources */,
 				ABA58A95291B7B3400254691 /* Environment.swift in Sources */,
 				ABA58A97291B7C0A00254691 /* NetworkLoggerPlugin.swift in Sources */,
+				ABA58A99291B7C5400254691 /* Encodable+.swift in Sources */,
 				AB4D7EB0291B6BCD00A7D14D /* AppDelegate.swift in Sources */,
 				AB4D7EB2291B6BCD00A7D14D /* SceneDelegate.swift in Sources */,
 			);
