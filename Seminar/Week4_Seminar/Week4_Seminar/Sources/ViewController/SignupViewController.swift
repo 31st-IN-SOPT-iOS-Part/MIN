@@ -26,10 +26,14 @@ final class SignupViewController: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
         $0.layer.cornerRadius = 8
-        //$0.addTarget(self, action: #selector(touchupSubmitButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(touchupSubmitButton), for: .touchUpInside)
     }
     
     // MARK: - Variables
+    
+    let userProvider = MoyaProvider<UserRouter>(
+        plugins: [NetworkLoggerPlugin(verbose: true)]
+    )
     
     let titles = ["이메일", "이름", "비밀번호"]
     let placeholders = ["이메일을 입력하세요", "이름을 입력하세요", "비밀번호를 입력하세요"]
@@ -98,8 +102,35 @@ extension SignupViewController {
 //    }
     
     // MARK: - Action Helpers
+    
+    @objc
+    private func touchupSubmitButton() {
+        if let email = emailView.popInput(),
+           let name = nameView.popInput(),
+           let password = passwordView.popInput() {
+            let param = SignupRequestDto(email: email, password: name, name: password)
+            signup(param: param)
+        }
+           
+    }
   
     
     // MARK: - Network Helpers
+    
+    private func signup(param: SignupRequestDto) {
+        userProvider.request(.signup(param: param)) { response in
+            switch response {
+            case .success(let result):
+                let status = result.statusCode
+                if status >= 200 && status < 300 {
+                    print("성공!")
+                } else if status >= 400 {
+                
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
 }
