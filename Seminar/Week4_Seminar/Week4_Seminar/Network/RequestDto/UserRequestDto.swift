@@ -14,3 +14,10 @@ struct SignupRequestDto: Codable {
     var password: String
     var name: String
 }
+
+// MARK: - LoginRequestDto
+
+struct LoginRequestDto: Codable {
+    var email: String
+    var password: String
+}
