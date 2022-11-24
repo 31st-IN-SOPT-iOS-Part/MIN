@@ -23,6 +23,8 @@
 		AB66BE51292F45EC00A57F34 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE50292F45EC00A57F34 /* Environment.swift */; };
 		AB66BE56292F483200A57F34 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE55292F483200A57F34 /* NetworkLoggerPlugin.swift */; };
 		AB66BE58292F484B00A57F34 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE57292F484B00A57F34 /* Encodable+.swift */; };
+		AB66BE5E292F4B1C00A57F34 /* MusicResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE5D292F4B1C00A57F34 /* MusicResponseDto.swift */; };
+		AB66BE62292F4BCD00A57F34 /* MusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE61292F4BCD00A57F34 /* MusicRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		AB66BE50292F45EC00A57F34 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		AB66BE55292F483200A57F34 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		AB66BE57292F484B00A57F34 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		AB66BE5D292F4B1C00A57F34 /* MusicResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicResponseDto.swift; sourceTree = "<group>"; };
+		AB66BE61292F4BCD00A57F34 /* MusicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				AB66BE54292F480E00A57F34 /* Base */,
+				AB66BE60292F4BBD00A57F34 /* Dto */,
+				AB66BE5F292F4B9F00A57F34 /* Router */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -195,6 +201,22 @@
 				AB66BE55292F483200A57F34 /* NetworkLoggerPlugin.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		AB66BE5F292F4B9F00A57F34 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE61292F4BCD00A57F34 /* MusicRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AB66BE60292F4BBD00A57F34 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE5D292F4B1C00A57F34 /* MusicResponseDto.swift */,
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +304,14 @@
 			files = (
 				AB66BE20292F279500A57F34 /* MusicGridViewController.swift in Sources */,
 				AB66BE3B292F2C9E00A57F34 /* MusicModel.swift in Sources */,
+				AB66BE62292F4BCD00A57F34 /* MusicRouter.swift in Sources */,
 				AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */,
 				AB66BE51292F45EC00A57F34 /* Environment.swift in Sources */,
 				AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */,
 				AB66BE56292F483200A57F34 /* NetworkLoggerPlugin.swift in Sources */,
 				AB66BE58292F484B00A57F34 /* Encodable+.swift in Sources */,
 				AB66BE48292F332000A57F34 /* MusicGridCollectionViewCell.swift in Sources */,
+				AB66BE5E292F4B1C00A57F34 /* MusicResponseDto.swift in Sources */,
 				AB66BE45292F2ED400A57F34 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
