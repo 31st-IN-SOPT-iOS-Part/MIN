@@ -98,7 +98,6 @@ extension MusicGridViewController {
         musicProvider.request(.fetchSongs) { response in
             switch response {
             case .success(let result):
-                
                 do {
                     let response = try result.map(FetchMusicResponseDto.self)
                     
