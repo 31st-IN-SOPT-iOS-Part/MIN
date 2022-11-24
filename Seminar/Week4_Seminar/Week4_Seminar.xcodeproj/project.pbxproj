@@ -13,6 +13,7 @@
 		AB66BE23292F279500A57F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB66BE21292F279500A57F34 /* Main.storyboard */; };
 		AB66BE25292F279500A57F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB66BE24292F279500A57F34 /* Assets.xcassets */; };
 		AB66BE28292F279500A57F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB66BE26292F279500A57F34 /* LaunchScreen.storyboard */; };
+		AB66BE3B292F2C9E00A57F34 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE3A292F2C9E00A57F34 /* MusicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB66BE24292F279500A57F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB66BE27292F279500A57F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB66BE29292F279500A57F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB66BE3A292F2C9E00A57F34 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		AB66BE33292F28A900A57F34 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE39292F2C8500A57F34 /* Model */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -129,6 +132,14 @@
 				AB66BE1F292F279500A57F34 /* MusicGridViewController.swift */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		AB66BE39292F2C8500A57F34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE3A292F2C9E00A57F34 /* MusicModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB66BE20292F279500A57F34 /* MusicGridViewController.swift in Sources */,
+				AB66BE3B292F2C9E00A57F34 /* MusicModel.swift in Sources */,
 				AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */,
 				AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */,
 			);
