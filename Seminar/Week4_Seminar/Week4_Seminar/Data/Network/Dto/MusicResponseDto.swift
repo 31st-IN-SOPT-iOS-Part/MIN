@@ -25,3 +25,14 @@ struct MusicDto: Codable {
         return MusicModel(albumImage: self.image, title: self.title, singer: self.singer)
     }
 }
+
+// MARK: - AddSongResponseDto
+
+struct AddSongResponseDto: Codable {
+    let statusCode: Int
+    let success: Bool
+    let message: String
+    let data: MusicDto
+}
+
+

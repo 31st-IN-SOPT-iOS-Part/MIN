@@ -12,6 +12,7 @@ import Moya
 
 enum MusicRouter {
     case fetchSongs
+    case addSong(param: AddSongRequestDto)
 }
 
 extension MusicRouter: TargetType {
@@ -23,6 +24,8 @@ extension MusicRouter: TargetType {
         switch self {
         case .fetchSongs:
             return "/music/list"
+        case .addSong(param: _):
+            return "/music"
         }
     }
     
@@ -30,6 +33,8 @@ extension MusicRouter: TargetType {
         switch self {
         case .fetchSongs:
             return .get
+        case .addSong(param: _):
+            return .post
         }
     }
     
@@ -37,11 +42,41 @@ extension MusicRouter: TargetType {
         switch self {
         case .fetchSongs:
             return .requestPlain
+        case .addSong(param: let param):
+            var multipartFormData: [MultipartFormData] = []
+            
+            /// image Data to MultipartFormData
+            let imageData = MultipartFormData(provider: .data(param.image),
+                                              name: "image",
+                                              fileName: "image.jpeg",
+                                              mimeType: "image/jpeg")
+            multipartFormData.append(imageData)
+            
+            let jsonParam = ["singer": param.singer, "title": param.title]
+            
+            /// Dictionary to JSON
+            let data = try! JSONSerialization.data(withJSONObject: jsonParam.asParameter(), options: .prettyPrinted)
+            
+            /// JSON object to JSON String
+            let jsonString = String(data: data, encoding: .utf8)!
+            
+            /// JSON String to MultipartFormData
+            let stringData = MultipartFormData(provider: .data(jsonString.data(using: String.Encoding.utf8)!),
+                                               name: "request",
+                                               mimeType: "application/json")
+            multipartFormData.append(stringData)
+            
+            return .uploadMultipart(multipartFormData)
         }
     }
     
     var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+        switch self {
+        case .addSong:
+            return ["Content-Type": "multipart/form-data"]
+        default:
+            return ["Content-Type": "application/json"]
+        }
     }
     
     
