@@ -19,6 +19,7 @@
 		AB66BE45292F2ED400A57F34 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE44292F2ED400A57F34 /* UIView+.swift */; };
 		AB66BE48292F332000A57F34 /* MusicGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE47292F332000A57F34 /* MusicGridCollectionViewCell.swift */; };
 		AB66BE4B292F3AD800A57F34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE4A292F3AD800A57F34 /* Kingfisher */; };
+		AB66BE4E292F3C8900A57F34 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE4D292F3C8900A57F34 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			files = (
 				AB66BE4B292F3AD800A57F34 /* Kingfisher in Frameworks */,
 				AB66BE40292F2DFE00A57F34 /* Then in Frameworks */,
+				AB66BE4E292F3C8900A57F34 /* Moya in Frameworks */,
 				AB66BE43292F2E0700A57F34 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +184,7 @@
 				AB66BE3F292F2DFE00A57F34 /* Then */,
 				AB66BE42292F2E0700A57F34 /* SnapKit */,
 				AB66BE4A292F3AD800A57F34 /* Kingfisher */,
+				AB66BE4D292F3C8900A57F34 /* Moya */,
 			);
 			productName = Week4_Seminar;
 			productReference = AB66BE18292F279500A57F34 /* Week4_Seminar.app */;
@@ -215,6 +218,7 @@
 				AB66BE3E292F2DFE00A57F34 /* XCRemoteSwiftPackageReference "Then" */,
 				AB66BE41292F2E0700A57F34 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AB66BE49292F3AD800A57F34 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				AB66BE4C292F3C8900A57F34 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = AB66BE19292F279500A57F34 /* Products */;
 			projectDirPath = "";
@@ -492,6 +496,14 @@
 				kind = branch;
 			};
 		};
+		AB66BE4C292F3C8900A57F34 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -509,6 +521,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB66BE49292F3AD800A57F34 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		AB66BE4D292F3C8900A57F34 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB66BE4C292F3C8900A57F34 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
