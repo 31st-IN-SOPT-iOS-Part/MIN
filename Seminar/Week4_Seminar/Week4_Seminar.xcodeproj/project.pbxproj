@@ -20,6 +20,7 @@
 		AB66BE48292F332000A57F34 /* MusicGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE47292F332000A57F34 /* MusicGridCollectionViewCell.swift */; };
 		AB66BE4B292F3AD800A57F34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE4A292F3AD800A57F34 /* Kingfisher */; };
 		AB66BE4E292F3C8900A57F34 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE4D292F3C8900A57F34 /* Moya */; };
+		AB66BE51292F45EC00A57F34 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE50292F45EC00A57F34 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AB66BE3A292F2C9E00A57F34 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		AB66BE44292F2ED400A57F34 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		AB66BE47292F332000A57F34 /* MusicGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGridCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB66BE50292F45EC00A57F34 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +72,8 @@
 		AB66BE1A292F279500A57F34 /* Week4_Seminar */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE4F292F45A700A57F34 /* Global */,
 				AB66BE2F292F285400A57F34 /* Application */,
-				AB66BE30292F287F00A57F34 /* Core */,
 				AB66BE32292F289C00A57F34 /* Resources */,
 				AB66BE33292F28A900A57F34 /* Data */,
 				AB66BE34292F28BE00A57F34 /* Presentation */,
@@ -87,14 +89,6 @@
 				AB66BE29292F279500A57F34 /* Info.plist */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		AB66BE30292F287F00A57F34 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				AB66BE31292F289100A57F34 /* Extensions */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		AB66BE31292F289100A57F34 /* Extensions */ = {
@@ -162,6 +156,23 @@
 				AB66BE47292F332000A57F34 /* MusicGridCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AB66BE4F292F45A700A57F34 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE52292F46BD00A57F34 /* Constant */,
+				AB66BE31292F289100A57F34 /* Extensions */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		AB66BE52292F46BD00A57F34 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE50292F45EC00A57F34 /* Environment.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 				AB66BE20292F279500A57F34 /* MusicGridViewController.swift in Sources */,
 				AB66BE3B292F2C9E00A57F34 /* MusicModel.swift in Sources */,
 				AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */,
+				AB66BE51292F45EC00A57F34 /* Environment.swift in Sources */,
 				AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */,
 				AB66BE48292F332000A57F34 /* MusicGridCollectionViewCell.swift in Sources */,
 				AB66BE45292F2ED400A57F34 /* UIView+.swift in Sources */,
@@ -282,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "http://3.34.53.11:8080";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -342,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "http://3.34.53.11:8080";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
