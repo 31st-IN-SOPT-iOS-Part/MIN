@@ -147,6 +147,40 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		AB66BE69292F770D00A57F34 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9336128F7F2C50074E18B /* Extensions */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		AB66BE6A292F771200A57F34 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				ABE9335728F7F1380074E18B /* Info.plist */,
+				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
+				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AB66BE6B292F785500A57F34 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EA14D2906754C00AFAA61 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AB66BE6D292F788D00A57F34 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		AB8EA14D2906754C00AFAA61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,9 +210,11 @@
 		ABE9334828F7F1370074E18B /* SOPT_KakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE69292F770D00A57F34 /* Global */,
+				AB66BE6A292F771200A57F34 /* Application */,
 				ABE9337328F804590074E18B /* Resource */,
-				ABE9337428F804740074E18B /* Sources */,
-				ABE9335728F7F1380074E18B /* Info.plist */,
+				AB66BE6B292F785500A57F34 /* Data */,
+				ABE9337428F804740074E18B /* Presentation */,
 			);
 			path = SOPT_KakaoTalk;
 			sourceTree = "<group>";
@@ -202,31 +238,19 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		ABE9337428F804740074E18B /* Sources */ = {
+		ABE9337428F804740074E18B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				AB8EA14D2906754C00AFAA61 /* Model */,
-				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
-				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
-				ABE9336128F7F2C50074E18B /* Extensions */,
-				ABE9337528F8048C0074E18B /* ViewControllers */,
-				AB2D6D8029057B4B003D43F8 /* Reusable */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		ABE9337528F8048C0074E18B /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */,
+				AB66BE6D292F788D00A57F34 /* Base */,
 				AB2D6D8529058112003D43F8 /* Auth */,
 				AB2D6D8629058142003D43F8 /* Friend */,
 				AB2D6D88290581AC003D43F8 /* Chat */,
 				AB2D6D872905814E003D43F8 /* Sharp */,
 				AB2D6D89290581BC003D43F8 /* Shop */,
 				AB2D6D8A290581C4003D43F8 /* More */,
+				AB2D6D8029057B4B003D43F8 /* Reusable */,
 			);
-			path = ViewControllers;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,7 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3H5YNSQ64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SOPT_KakaoTalk/Info.plist;
+				INFOPLIST_FILE = SOPT_KakaoTalk/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -509,7 +533,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3H5YNSQ64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SOPT_KakaoTalk/Info.plist;
+				INFOPLIST_FILE = SOPT_KakaoTalk/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
