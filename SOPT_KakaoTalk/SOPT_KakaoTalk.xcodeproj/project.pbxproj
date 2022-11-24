@@ -18,6 +18,10 @@
 		AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D6D912905824B003D43F8 /* MoreViewController.swift */; };
 		AB2DC39E290ACCCB00210DD2 /* ChatCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DC39D290ACCCB00210DD2 /* ChatCollectionReusableView.swift */; };
 		AB2DC3A0290AD3EE00210DD2 /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2DC39F290AD3EE00210DD2 /* PhotoGridViewController.swift */; };
+		AB66BE6F292F7AA700A57F34 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE6E292F7AA700A57F34 /* Constant.swift */; };
+		AB66BE73292F7B2A00A57F34 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE72292F7B2A00A57F34 /* NetworkLoggerPlugin.swift */; };
+		AB66BE76292F7B5300A57F34 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE75292F7B5300A57F34 /* Moya */; };
+		AB66BE78292F7B9400A57F34 /* Encoding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE77292F7B9400A57F34 /* Encoding+.swift */; };
 		AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */; };
 		AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = AB8EA14B290673C500AFAA61 /* SwiftyColor */; };
 		AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14E2906755C00AFAA61 /* FriendModel.swift */; };
@@ -50,6 +54,9 @@
 		AB2D6D912905824B003D43F8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AB2DC39D290ACCCB00210DD2 /* ChatCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionReusableView.swift; sourceTree = "<group>"; };
 		AB2DC39F290AD3EE00210DD2 /* PhotoGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
+		AB66BE6E292F7AA700A57F34 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AB66BE72292F7B2A00A57F34 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		AB66BE77292F7B9400A57F34 /* Encoding+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encoding+.swift"; sourceTree = "<group>"; };
 		AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		AB8EA14E2906755C00AFAA61 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 			files = (
 				ABE9336028F7F27A0074E18B /* SnapKit in Frameworks */,
 				AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */,
+				AB66BE76292F7B5300A57F34 /* Moya in Frameworks */,
 				ABC71BB52903E4B2002EF41D /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +158,7 @@
 		AB66BE69292F770D00A57F34 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE6E292F7AA700A57F34 /* Constant.swift */,
 				ABE9336128F7F2C50074E18B /* Extensions */,
 			);
 			path = Global;
@@ -158,9 +167,9 @@
 		AB66BE6A292F771200A57F34 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				ABE9335728F7F1380074E18B /* Info.plist */,
 				ABE9334928F7F1370074E18B /* AppDelegate.swift */,
 				ABE9334B28F7F1370074E18B /* SceneDelegate.swift */,
+				ABE9335728F7F1380074E18B /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -168,6 +177,7 @@
 		AB66BE6B292F785500A57F34 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE70292F7B1400A57F34 /* Network */,
 				AB8EA14D2906754C00AFAA61 /* Model */,
 			);
 			path = Data;
@@ -177,6 +187,22 @@
 			isa = PBXGroup;
 			children = (
 				AB2D6D8329057F7A003D43F8 /* KakaoTabbarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AB66BE70292F7B1400A57F34 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE71292F7B1900A57F34 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AB66BE71292F7B1900A57F34 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE72292F7B2A00A57F34 /* NetworkLoggerPlugin.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -224,6 +250,7 @@
 			children = (
 				ABE9336228F7F2D00074E18B /* UIView.swift */,
 				ABE9339928F98FE10074E18B /* UIStackView.swift */,
+				AB66BE77292F7B9400A57F34 /* Encoding+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +300,7 @@
 				ABE9335F28F7F27A0074E18B /* SnapKit */,
 				ABC71BB42903E4B2002EF41D /* Then */,
 				AB8EA14B290673C500AFAA61 /* SwiftyColor */,
+				AB66BE75292F7B5300A57F34 /* Moya */,
 			);
 			productName = SOPT_KakaoTalk;
 			productReference = ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */;
@@ -306,6 +334,7 @@
 				ABE9335E28F7F27A0074E18B /* XCRemoteSwiftPackageReference "SnapKit" */,
 				ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */,
 				AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
+				AB66BE74292F7B5200A57F34 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = ABE9334728F7F1370074E18B /* Products */;
 			projectDirPath = "";
@@ -334,8 +363,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB66BE78292F7B9400A57F34 /* Encoding+.swift in Sources */,
 				ABC434BB29083DFA001FE626 /* MyProfileHeaderView.swift in Sources */,
 				ABE9336328F7F2D00074E18B /* UIView.swift in Sources */,
+				AB66BE73292F7B2A00A57F34 /* NetworkLoggerPlugin.swift in Sources */,
 				AB0DEB82290A29B000C37A27 /* ChatModel.swift in Sources */,
 				AB2D6D8429057F7A003D43F8 /* KakaoTabbarController.swift in Sources */,
 				AB2D6D8C29058227003D43F8 /* ChatViewController.swift in Sources */,
@@ -345,6 +376,7 @@
 				AB2DC39E290ACCCB00210DD2 /* ChatCollectionReusableView.swift in Sources */,
 				AB2D6D9029058242003D43F8 /* ShopViewController.swift in Sources */,
 				AB206DE2290E5CF200EA4A65 /* PhotoCollectionViewCell.swift in Sources */,
+				AB66BE6F292F7AA700A57F34 /* Constant.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
 				ABE9336528F7F3290074E18B /* SignupViewController.swift in Sources */,
 				AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */,
@@ -386,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "http://3.34.53.11:8080";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -446,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "http://3.34.53.11:8080";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -576,6 +610,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AB66BE74292F7B5200A57F34 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 		AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/SwiftyColor";
@@ -603,6 +645,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AB66BE75292F7B5300A57F34 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB66BE74292F7B5200A57F34 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		AB8EA14B290673C500AFAA61 /* SwiftyColor */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */;
