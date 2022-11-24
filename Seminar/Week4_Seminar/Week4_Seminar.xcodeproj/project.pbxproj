@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE1B292F279500A57F34 /* AppDelegate.swift */; };
 		AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE1D292F279500A57F34 /* SceneDelegate.swift */; };
-		AB66BE20292F279500A57F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE1F292F279500A57F34 /* ViewController.swift */; };
+		AB66BE20292F279500A57F34 /* MusicGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE1F292F279500A57F34 /* MusicGridViewController.swift */; };
 		AB66BE23292F279500A57F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB66BE21292F279500A57F34 /* Main.storyboard */; };
 		AB66BE25292F279500A57F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB66BE24292F279500A57F34 /* Assets.xcassets */; };
 		AB66BE28292F279500A57F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB66BE26292F279500A57F34 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		AB66BE18292F279500A57F34 /* Week4_Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4_Seminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB66BE1B292F279500A57F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB66BE1D292F279500A57F34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB66BE1F292F279500A57F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB66BE1F292F279500A57F34 /* MusicGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGridViewController.swift; sourceTree = "<group>"; };
 		AB66BE22292F279500A57F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB66BE24292F279500A57F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB66BE27292F279500A57F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		AB66BE34292F28BE00A57F34 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				AB66BE1F292F279500A57F34 /* ViewController.swift */,
+				AB66BE38292F2BE000A57F34 /* Music */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -121,6 +121,14 @@
 				AB66BE24292F279500A57F34 /* Assets.xcassets */,
 			);
 			path = Asset;
+			sourceTree = "<group>";
+		};
+		AB66BE38292F2BE000A57F34 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE1F292F279500A57F34 /* MusicGridViewController.swift */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB66BE20292F279500A57F34 /* ViewController.swift in Sources */,
+				AB66BE20292F279500A57F34 /* MusicGridViewController.swift in Sources */,
 				AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */,
 				AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */,
 			);
