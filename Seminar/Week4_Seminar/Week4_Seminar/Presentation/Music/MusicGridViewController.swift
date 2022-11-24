@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Moya
 import SnapKit
 import Then
 
@@ -31,18 +32,11 @@ class MusicGridViewController: UIViewController {
     }()
     
     // MARK: - Variables
+    let musicProvider = MoyaProvider<MusicRouter>(
+        plugins: [NetworkLoggerPlugin(verbose: true)]
+    )
     
-    var musicList: [MusicModel] = [
-        MusicModel(albumImage: "albumImage1", title: "Eleven", singer: "IVE(아이브)"),
-        MusicModel(albumImage: "albumImage2", title: "After LIKE", singer: "IVE(아이브)"),
-        MusicModel(albumImage: "albumImage3", title: "Attention", singer: "New Jeans"),
-        MusicModel(albumImage: "albumImage4", title: "Shut Down", singer: "BLACKPINK"),
-        MusicModel(albumImage: "albumImage5", title: "Hype Boy", singer: "New Jeans"),
-        MusicModel(albumImage: "albumImage6", title: "LOVE DIVE", singer: "IVE(아이브)"),
-        MusicModel(albumImage: "albumImage7", title: "Pink Venom", singer: "BLACKPINK"),
-        MusicModel(albumImage: "albumImage8", title: "Rush Hour (feat. j-hope of ...", singer: "Crush"),
-        MusicModel(albumImage: "albumImage1", title: "Monologue", singer: "테이")
-    ]
+    var musicList: [MusicModel] = []
     
     // MARK: - Constants
     
@@ -52,6 +46,12 @@ class MusicGridViewController: UIViewController {
     final let musicCellHeight: CGFloat = 198
     
     // MARK: - Life Cycles
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchMusic()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +90,30 @@ extension MusicGridViewController {
     
     private func register() {
         musicCollectionView.register(MusicGridCollectionViewCell.self, forCellWithReuseIdentifier: MusicGridCollectionViewCell.identifier)
+    }
+    
+    // MARK: - Network Helper
+    
+    private func fetchMusic() {
+        musicProvider.request(.fetchSongs) { response in
+            switch response {
+            case .success(let result):
+                print(result)
+                
+                do {
+                    let response = try result.map(FetchMusicResponseDto.self)
+                    
+                    for dto in response.data {
+                        self.musicList.append(dto.converToMusic())
+                    }
+                    self.musicCollectionView.reloadData()
+                } catch(let error) {
+                    print(error.localizedDescription)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

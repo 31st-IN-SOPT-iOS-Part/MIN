@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 // MARK: - MusicGridCollectionViewCell
 
@@ -76,8 +77,10 @@ extension MusicGridCollectionViewCell {
     // MARK: - General Helper
     
     func dataBind(musicModel: MusicModel) {
-        albumImageView.image = UIImage(named: musicModel.albumImage)
         titleLabel.text = musicModel.title
         singerlabel.text = musicModel.singer
+        
+        guard let url = URL(string: musicModel.albumImage) else {return}
+        albumImageView.kf.setImage(with: url)
     }
 }

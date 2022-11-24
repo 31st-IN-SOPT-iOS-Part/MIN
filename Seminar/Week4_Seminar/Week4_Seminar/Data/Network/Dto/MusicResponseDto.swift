@@ -20,4 +20,8 @@ struct MusicDto: Codable {
     let id: Int
     let image: String
     let title, singer: String
+    
+    func converToMusic() -> MusicModel {
+        return MusicModel(albumImage: self.image, title: self.title, singer: self.singer)
+    }
 }
