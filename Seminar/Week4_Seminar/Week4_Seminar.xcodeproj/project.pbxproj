@@ -21,6 +21,8 @@
 		AB66BE4B292F3AD800A57F34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE4A292F3AD800A57F34 /* Kingfisher */; };
 		AB66BE4E292F3C8900A57F34 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE4D292F3C8900A57F34 /* Moya */; };
 		AB66BE51292F45EC00A57F34 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE50292F45EC00A57F34 /* Environment.swift */; };
+		AB66BE56292F483200A57F34 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE55292F483200A57F34 /* NetworkLoggerPlugin.swift */; };
+		AB66BE58292F484B00A57F34 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE57292F484B00A57F34 /* Encodable+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AB66BE44292F2ED400A57F34 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		AB66BE47292F332000A57F34 /* MusicGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB66BE50292F45EC00A57F34 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AB66BE55292F483200A57F34 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		AB66BE57292F484B00A57F34 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AB66BE44292F2ED400A57F34 /* UIView+.swift */,
+				AB66BE57292F484B00A57F34 /* Encodable+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		AB66BE33292F28A900A57F34 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE53292F46E500A57F34 /* Network */,
 				AB66BE39292F2C8500A57F34 /* Model */,
 			);
 			path = Data;
@@ -173,6 +179,22 @@
 				AB66BE50292F45EC00A57F34 /* Environment.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		AB66BE53292F46E500A57F34 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE54292F480E00A57F34 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AB66BE54292F480E00A57F34 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE55292F483200A57F34 /* NetworkLoggerPlugin.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +285,8 @@
 				AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */,
 				AB66BE51292F45EC00A57F34 /* Environment.swift in Sources */,
 				AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */,
+				AB66BE56292F483200A57F34 /* NetworkLoggerPlugin.swift in Sources */,
+				AB66BE58292F484B00A57F34 /* Encodable+.swift in Sources */,
 				AB66BE48292F332000A57F34 /* MusicGridCollectionViewCell.swift in Sources */,
 				AB66BE45292F2ED400A57F34 /* UIView+.swift in Sources */,
 			);
