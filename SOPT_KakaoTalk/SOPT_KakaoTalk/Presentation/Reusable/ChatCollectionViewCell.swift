@@ -6,9 +6,11 @@
 //
 
 import UIKit
+
+import Kingfisher
 import SnapKit
-import Then
 import SwiftyColor
+import Then
 
 // MARK: - ChatCollectionViewCell
 
@@ -92,9 +94,11 @@ extension ChatCollectionViewCell {
     }
     
     func dataBind(model: ChatModel) {
-        profileImage.image = UIImage(named: model.profileImage)
         nameLabel.text = model.name
         messageLabel.text = model.message
         timeLabel.text = model.time
+        
+        guard let url = URL(string: model.profileImage) else {return}
+        profileImage.kf.setImage(with: url)
     }
 }

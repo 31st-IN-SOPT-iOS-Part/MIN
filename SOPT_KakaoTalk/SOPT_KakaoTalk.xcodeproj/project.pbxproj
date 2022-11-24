@@ -22,6 +22,9 @@
 		AB66BE73292F7B2A00A57F34 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE72292F7B2A00A57F34 /* NetworkLoggerPlugin.swift */; };
 		AB66BE76292F7B5300A57F34 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE75292F7B5300A57F34 /* Moya */; };
 		AB66BE78292F7B9400A57F34 /* Encoding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE77292F7B9400A57F34 /* Encoding+.swift */; };
+		AB66BE7C292F809600A57F34 /* ChatResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE7B292F809600A57F34 /* ChatResponseDto.swift */; };
+		AB66BE7F292F813100A57F34 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE7E292F813100A57F34 /* ChatRouter.swift */; };
+		AB66BE82292F89A800A57F34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE81292F89A800A57F34 /* Kingfisher */; };
 		AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */; };
 		AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = AB8EA14B290673C500AFAA61 /* SwiftyColor */; };
 		AB8EA14F2906755C00AFAA61 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EA14E2906755C00AFAA61 /* FriendModel.swift */; };
@@ -57,6 +60,8 @@
 		AB66BE6E292F7AA700A57F34 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AB66BE72292F7B2A00A57F34 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		AB66BE77292F7B9400A57F34 /* Encoding+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encoding+.swift"; sourceTree = "<group>"; };
+		AB66BE7B292F809600A57F34 /* ChatResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponseDto.swift; sourceTree = "<group>"; };
+		AB66BE7E292F813100A57F34 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
 		AB8EA14829066E0100AFAA61 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		AB8EA14E2906755C00AFAA61 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		ABC434BA29083DFA001FE626 /* MyProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 				AB8EA14C290673C500AFAA61 /* SwiftyColor in Frameworks */,
 				AB66BE76292F7B5300A57F34 /* Moya in Frameworks */,
 				ABC71BB52903E4B2002EF41D /* Then in Frameworks */,
+				AB66BE82292F89A800A57F34 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				AB66BE71292F7B1900A57F34 /* Base */,
+				AB66BE7A292F800500A57F34 /* DTO */,
+				AB66BE7D292F812700A57F34 /* Router */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -205,6 +213,22 @@
 				AB66BE72292F7B2A00A57F34 /* NetworkLoggerPlugin.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		AB66BE7A292F800500A57F34 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE7B292F809600A57F34 /* ChatResponseDto.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		AB66BE7D292F812700A57F34 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB66BE7E292F813100A57F34 /* ChatRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		AB8EA14D2906754C00AFAA61 /* Model */ = {
@@ -301,6 +325,7 @@
 				ABC71BB42903E4B2002EF41D /* Then */,
 				AB8EA14B290673C500AFAA61 /* SwiftyColor */,
 				AB66BE75292F7B5300A57F34 /* Moya */,
+				AB66BE81292F89A800A57F34 /* Kingfisher */,
 			);
 			productName = SOPT_KakaoTalk;
 			productReference = ABE9334628F7F1370074E18B /* SOPT_KakaoTalk.app */;
@@ -335,6 +360,7 @@
 				ABC71BB32903E4B2002EF41D /* XCRemoteSwiftPackageReference "Then" */,
 				AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */,
 				AB66BE74292F7B5200A57F34 /* XCRemoteSwiftPackageReference "Moya" */,
+				AB66BE80292F89A800A57F34 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ABE9334728F7F1370074E18B /* Products */;
 			projectDirPath = "";
@@ -375,6 +401,7 @@
 				AB206DE4290E60D600EA4A65 /* PhotoModel.swift in Sources */,
 				AB2DC39E290ACCCB00210DD2 /* ChatCollectionReusableView.swift in Sources */,
 				AB2D6D9029058242003D43F8 /* ShopViewController.swift in Sources */,
+				AB66BE7C292F809600A57F34 /* ChatResponseDto.swift in Sources */,
 				AB206DE2290E5CF200EA4A65 /* PhotoCollectionViewCell.swift in Sources */,
 				AB66BE6F292F7AA700A57F34 /* Constant.swift in Sources */,
 				ABE9334E28F7F1370074E18B /* LoginViewController.swift in Sources */,
@@ -382,6 +409,7 @@
 				AB2D6D922905824B003D43F8 /* MoreViewController.swift in Sources */,
 				ABE9336A28F7F7D00074E18B /* FriendViewController.swift in Sources */,
 				ABE9336728F7F40F0074E18B /* WelcomeViewController.swift in Sources */,
+				AB66BE7F292F813100A57F34 /* ChatRouter.swift in Sources */,
 				ABE9336C28F7F9BB0074E18B /* ProfileDetailViewController.swift in Sources */,
 				AB2D6D8E29058237003D43F8 /* SharpViewController.swift in Sources */,
 				AB8EA14929066E0100AFAA61 /* FriendTableViewCell.swift in Sources */,
@@ -618,6 +646,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		AB66BE80292F89A800A57F34 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		AB8EA14A290673C500AFAA61 /* XCRemoteSwiftPackageReference "SwiftyColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/SwiftyColor";
@@ -649,6 +685,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB66BE74292F7B5200A57F34 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		AB66BE81292F89A800A57F34 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB66BE80292F89A800A57F34 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		AB8EA14B290673C500AFAA61 /* SwiftyColor */ = {
 			isa = XCSwiftPackageProductDependency;

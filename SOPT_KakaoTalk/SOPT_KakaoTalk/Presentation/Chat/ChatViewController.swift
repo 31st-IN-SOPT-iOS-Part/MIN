@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+import Moya
 import SnapKit
 import Then
 import SwiftyColor
@@ -52,6 +54,14 @@ class ChatViewController: UIViewController {
         return collectionView
     }()
     
+    // MARK: - Variables
+    
+    let chatProvider = MoyaProvider<ChatRouter>(
+        plugins: [NetworkLoggerPlugin(verbose: true)]
+    )
+    
+    var chatList: [ChatModel] = []
+    
     // MARK: - Constant
     
     final let chatHeight: CGFloat = 50
@@ -74,6 +84,12 @@ class ChatViewController: UIViewController {
     
     
     // MARK: - Life Cycles
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchChat()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +104,7 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController {
     
-    // MARK: - Layout
+    // MARK: - Layout Helper
     
     private func layout() {
         
@@ -132,11 +148,36 @@ extension ChatViewController {
     }
     
     
-    // MARK: - General
+    // MARK: - General Helper
     
     private func register() {
         chatCollectionView.register(ChatCollectionViewCell.self, forCellWithReuseIdentifier: ChatCollectionViewCell.identifier)
         chatCollectionView.register(ChatCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ChatCollectionReusableView.identifier)
+    }
+    
+    // MARK: - Network Helper
+    
+    private func fetchChat() {
+        var list: [ChatModel] = []
+        
+        chatProvider.request(.fetchChat) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    let response = try result.map(FetchChatResponseDto.self)
+                    
+                    for dto in response.data.chatInfo {
+                        list.append(dto.convertToChatModel())
+                    }
+                    self.chatList = list
+                    self.chatCollectionView.reloadData()
+                } catch(let error) {
+                    print(error.localizedDescription)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
