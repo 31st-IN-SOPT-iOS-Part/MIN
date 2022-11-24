@@ -16,6 +16,7 @@
 		AB66BE3B292F2C9E00A57F34 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE3A292F2C9E00A57F34 /* MusicModel.swift */; };
 		AB66BE40292F2DFE00A57F34 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE3F292F2DFE00A57F34 /* Then */; };
 		AB66BE43292F2E0700A57F34 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB66BE42292F2E0700A57F34 /* SnapKit */; };
+		AB66BE45292F2ED400A57F34 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66BE44292F2ED400A57F34 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AB66BE27292F279500A57F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB66BE29292F279500A57F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB66BE3A292F2C9E00A57F34 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		AB66BE44292F2ED400A57F34 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		AB66BE31292F289100A57F34 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AB66BE44292F2ED400A57F34 /* UIView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				AB66BE3B292F2C9E00A57F34 /* MusicModel.swift in Sources */,
 				AB66BE1C292F279500A57F34 /* AppDelegate.swift in Sources */,
 				AB66BE1E292F279500A57F34 /* SceneDelegate.swift in Sources */,
+				AB66BE45292F2ED400A57F34 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
